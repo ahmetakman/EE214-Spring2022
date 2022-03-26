@@ -1,0 +1,246 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{tabularx} % extra features for tabular environment
+\usepackage{amsmath}  % improve math presentation
+\usepackage{float}
+\usepackage{pdfpages}
+
+\usepackage{graphicx} % takes care of graphic including machinery
+\graphicspath{ {./figures/} }
+\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+\usepackage{cite} % takes care of citations
+\usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor =blue         
+}
+
+
+
+
+\begin{document}
+
+\title{Experiment 1 Preliminary Work \protect\\ Diodes and Rectifiers}
+\author{Ahmet Akman 2442366 \protect\\}
+\date{\today}
+\maketitle
+
+%\begin{abstract}
+%abstract
+%\end{abstract}
+
+\section{Introduction} 
+\section{Step 1}
+Notes on signal generators, oscilloscopes and multimetersi are studied and reviewed the fundamentals.
+\section{Step 2}
+Notes on dioedes document is studied. The datasheets of the diodes to be used in this experiment are reviewed, which are \href{https://www.vishay.com/docs/88503/1n4001.pdf}{1N40007} , \href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159} ,\href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119} ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2}.   
+\section{Step 3}
+%MATLAB and Latex
+In this step characteristics of linear modeled junction diodes are analyzed according to the I vs V equation as follows,
+\[
+I  = I_s[e^\frac{qV}{nkT} - 1]    
+\] 
+Ideality constant n is taken 1 for both cases. From explanation in the manual \(\frac{kT}{q}\) is taken as 25 mV at temperature (20\(\circ\)C ) . The common pievewise linear model for a junction diode is given in Figure 1.
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{3_1.png}
+   \caption{Common piecewise linear model for a junction diode.}
+\end{figure} 
+
+\subsection{a)}
+
+\begin{table}[H]
+\begin{center}
+\caption{ I vs V}
+\vspace{2mm}
+\begin{tabular}{||c | c ||} 
+\hline
+V(Volts) & I \\ [0.5ex] 
+\hline\hline
+-0.40 & something  \\ 
+\hline
+-0.20 & something  \\ 
+\hline
+0 & something  \\ 
+\hline
+0.10 & something  \\ 
+\hline
+0.20 & something  \\ 
+\hline
+0.30 & something  \\ 
+\hline
+0.40 & something  \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+    
+    
+\subsection{b)}
+
+\begin{table}[H]
+\begin{center}
+\caption{ I vs V}
+\vspace{2mm}
+\begin{tabular}{||c | c ||} 
+\hline
+V(Volts) & I \\ [0.5ex] 
+\hline\hline
+-0.40 & something  \\ 
+\hline
+-0.20 & something  \\ 
+\hline
+0 & something  \\ 
+\hline
+0.10 & something  \\ 
+\hline
+0.20 & something  \\ 
+\hline
+0.30 & something  \\ 
+\hline
+0.40 & something  \\ 
+\hline
+0.50 & something  \\ 
+\hline
+0.60 & something  \\ 
+\hline
+0.70 & something  \\ 
+\hline
+0.80 & something  \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\section{Step 4}
+
+%Hand
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{4_1.png}
+   \caption{Half-wave circuit schematic for the Step 4}
+\end{figure} 
+
+\section{Step 5}
+%Hand
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{5_1.png}
+   \caption{Diode clamper circuit schematic for the Step 5}
+\end{figure} 
+
+\subsection{a)}
+\subsection{b)}
+\section{Step 6}
+%Hand + MATLAB
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{6_1.png}
+   \caption{Half-wave rectifier circuit schematic for the Step 6}
+\end{figure} 
+
+\subsection{a)}
+\subsection{b)}
+\subsection{c)}
+\section{Step 7}
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{7_1.png}
+   \caption{Full-wave rectifier circuit schematic for the Step 7}
+\end{figure} 
+
+\section{Step 8}
+%LTSpice
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{8_1.png}
+   \caption{Common piecewise linear model for a zener diode.}
+\end{figure} 
+
+\section{Step 9}
+%LTSpice
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{9_1.png}
+   \caption{DC level shifter circuit schematic for the Step 9}
+\end{figure} 
+
+\section{Step 10}
+%LTSpice
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{10_1.png}
+   \caption{Regulation with zener diode circuit schematic for the Step 10}
+\end{figure} 
+
+\section{Step 11}
+%LTSpice
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{11_1.png}
+   \caption{Full-wave rectifier circuit schematic for the Step 11}
+\end{figure} 
+
+\section{Step 12}
+%LTSpice and BONUS
+
+\subsection{a)}
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{12_1.png}
+   \caption{i-v characteristics of a box for the Step 12 part a}
+\end{figure} 
+
+\subsection{b)}
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{12_2.png}
+   \caption{i-v characteristics of a box for the Step 12 part b}
+\end{figure} 
+
+\section{Conclusion}
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE TABLE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\begin{center}
+    \caption{Resistance reading by color code convention.}
+    \vspace{2mm}
+    \begin{tabular}{||c | c | c||} 
+        \hline
+        Color Order & Value & Tolerance \\ [0.5ex] 
+        \hline\hline
+        Brown / Black / Red / Gold & 1k\( \Omega \) & \( \% \) 5  \\ 
+        \hline
+        Yellow / Violet / Red / Gold & 4.7k\( \Omega \) & \( \% \) 5   \\
+        \hline
+        Brown / Grey / Orange / Gold & 18k\( \Omega \) & \( \% \) 5  \\ [1ex] 
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+ 	\centering
+	\includegraphics[width=1\textwidth]{5.png}
+	\caption{Circuit schematic for the step 5}
+\end{figure} 
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE FROM PDF   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H] \centering{
+	\includegraphics[scale=0.25]{2a_plot.pdf}}
+	\caption{Experiment 2}
+\end{figure}
+	
