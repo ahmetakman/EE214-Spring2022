@@ -85,6 +85,20 @@ V(Volts) & I (Amps) \\ [0.5ex]
 \caption{i versus v plot}
 \end{figure} 
     
+\begin{table}[H]
+    \begin{center}
+    \caption{ Parameters obtained from the plot}
+    \vspace{2mm}
+    \begin{tabular}{||c | c | c ||} 
+    \hline
+    \(V_{on}\) &  \(r_f\) & \(r_r\)\\ [0.5ex] 
+    \hline\hline
+    0.3V & 0.046\(\Omega\)  & 2.5\(\Omega\)   \\ 
+    
+\hline
+\end{tabular}
+\end{center}
+\end{table}
     
 
     
@@ -117,7 +131,6 @@ V(Volts) & I (Amps) \\ [0.5ex]
 0.70 & 0.001446257064290  \\ 
 \hline
 0.80 & 0.078962960182680  \\ 
-
 \hline
 \end{tabular}
 \end{center}
@@ -130,7 +143,20 @@ V(Volts) & I (Amps) \\ [0.5ex]
     \includegraphics[width=1\textwidth]{3b.png}
     \caption{i versus v plot}
 \end{figure} 
-
+\begin{table}[H]
+    \begin{center}
+    \caption{ Parameters obtained from the plot}
+    \vspace{2mm}
+    \begin{tabular}{||c | c | c ||} 
+    \hline
+    \(V_{on}\) &  \(r_f\) & \(r_r\)\\ [0.5ex] 
+    \hline\hline
+    0.7V & 1.2893\(\Omega\)  & 68.97\(\Omega\)   \\ 
+    
+\hline
+\end{tabular}
+\end{center}
+\end{table}
 
 \section{Step 4}
 
@@ -172,6 +198,7 @@ V(Volts) & I (Amps) \\ [0.5ex]
    \caption{Diode clamper circuit simulation plot (Square wave input)}
 \end{figure} 
 
+\section{Step 6}
 
 \begin{figure}[H]
     \centering
@@ -245,6 +272,28 @@ V(Volts) & I (Amps) \\ [0.5ex]
    \includegraphics[width=1\textwidth]{8_1.png}
    \caption{Common piecewise linear model for a zener diode.}
 \end{figure} 
+
+
+\begin{table}[H]
+    \begin{center}
+    \caption{ Parameters from datasheet}
+    \vspace{2mm}
+    \begin{tabular}{||c | c ||} 
+    \hline
+    Parameter & Value \\ [0.5ex] 
+    \hline\hline
+    \(V_{on}\) & 0.5V  \\ 
+    \hline
+    \(V_z\) & 6.2V  \\ 
+    \hline
+    \(r_f\) & 0.003 \(\Omega\)  \\ 
+    \hline
+    \(r_r\)& 1 to 10 \(\Omega\)  \\ 
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
 
 \section{Step 9}
 %LTSpice
