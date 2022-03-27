@@ -51,31 +51,41 @@ Ideality constant n is taken 1 for both cases. From explanation in the manual \(
 
 \subsection{a)}
 
+
 \begin{table}[H]
 \begin{center}
 \caption{ I vs V}
 \vspace{2mm}
 \begin{tabular}{||c | c ||} 
 \hline
-V(Volts) & I \\ [0.5ex] 
+V(Volts) & I (Amps) \\ [0.5ex] 
 \hline\hline
--0.40 & something  \\ 
+-0.40 & -2.499999718662063e-07  \\ 
 \hline
--0.20 & something  \\ 
+-0.20 & -2.499161343430244e-07  \\ 
 \hline
-0 & something  \\ 
+0 & 0  \\ 
 \hline
-0.10 & something  \\ 
+0.10 & 1.339953750828606e-05  \\ 
 \hline
-0.20 & something  \\ 
+0.20 & 7.449894967604320e-04  \\ 
 \hline
-0.30 & something  \\ 
+0.30 & 0.040688447854751  \\ 
 \hline
-0.40 & something  \\ 
+0.40 & 2.221527380126968  \\ 
 \hline
 \end{tabular}
 \end{center}
 \end{table}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{3a.png}
+\caption{i versus v plot}
+\end{figure} 
+    
+    
 
     
     
@@ -87,33 +97,40 @@ V(Volts) & I \\ [0.5ex]
 \vspace{2mm}
 \begin{tabular}{||c | c ||} 
 \hline
-V(Volts) & I \\ [0.5ex] 
+V(Volts) & I (Amps) \\ [0.5ex] 
 \hline\hline
--0.40 & something  \\ 
+-0.40 & -9.999998874648254e-16  \\ 
 \hline
--0.20 & something  \\ 
+-0.20 & -9.996645373720976e-16  \\ 
 \hline
-0 & something  \\ 
+0 & 0  \\ 
 \hline
-0.10 & something  \\ 
+0.20 & 2.979957987041728e-12  \\ 
 \hline
-0.20 & something  \\ 
+0.40 & 8.886109520507873e-09  \\ 
+
 \hline
-0.30 & something  \\ 
+0.50 & 4.851651944097903e-07  \\ 
 \hline
-0.40 & something  \\ 
+0.60 & 2.648912212884338e-05  \\ 
 \hline
-0.50 & something  \\ 
+0.70 & 0.001446257064290  \\ 
 \hline
-0.60 & something  \\ 
-\hline
-0.70 & something  \\ 
-\hline
-0.80 & something  \\ 
+0.80 & 0.078962960182680  \\ 
+
 \hline
 \end{tabular}
 \end{center}
 \end{table}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{3b.png}
+    \caption{i versus v plot}
+\end{figure} 
+
 
 \section{Step 4}
 
@@ -134,10 +151,27 @@ V(Volts) & I \\ [0.5ex]
    \caption{Diode clamper circuit schematic for the Step 5}
 \end{figure} 
 
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{5SCH.png}
+   \caption{Diode clamper circuit simulation schematic for the Step 5}
+\end{figure} 
+
+
+
 \subsection{a)}
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{5a.png}
+   \caption{Diode clamper circuit simulation plot}
+\end{figure} 
 \subsection{b)}
-\section{Step 6}
-%Hand + MATLAB
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{5b.png}
+   \caption{Diode clamper circuit simulation plot (Square wave input)}
+\end{figure} 
+
 
 \begin{figure}[H]
     \centering
@@ -145,9 +179,26 @@ V(Volts) & I \\ [0.5ex]
    \caption{Half-wave rectifier circuit schematic for the Step 6}
 \end{figure} 
 
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{6SCH.png}
+   \caption{Half-wave rectifier circuit simulation schematic for the Step 6}
+\end{figure} 
+
+
+
 \subsection{a)}
+
+
 \subsection{b)}
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{6.png}
+   \caption{Half wave rectifier circuit simulation plot \(V_o\) }
+\end{figure} 
 \subsection{c)}
+
 \section{Step 7}
 
 \begin{figure}[H]
@@ -155,6 +206,36 @@ V(Volts) & I \\ [0.5ex]
    \includegraphics[width=1\textwidth]{7_1.png}
    \caption{Full-wave rectifier circuit schematic for the Step 7}
 \end{figure} 
+
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{7SCH.png}
+   \caption{Full-wave rectifier circuit simulation schematic for the Step 7}
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{7_empty.png}
+   \caption{Full-wave rectifier circuit simulation plot \(V_o\) || no capacitor }
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{7_10nF.png}
+   \caption{Full-wave rectifier circuit simulation plot \(V_o\) || 10nF capacitor}
+\end{figure} 
+
+
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{7_1uF.png}
+   \caption{Full-wave rectifier circuit simulation plot \(V_o\) || 1uF capacitor }
+\end{figure} 
+
+
+
 
 \section{Step 8}
 %LTSpice
@@ -173,6 +254,19 @@ V(Volts) & I \\ [0.5ex]
    \caption{DC level shifter circuit schematic for the Step 9}
 \end{figure} 
 
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{9SCH.png}
+   \caption{DC level shifter circuit simulation schematic for the Step 9}
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{9.png}
+   \caption{DC level shifter circuit simulation  plot \(V_o\)}
+\end{figure} 
+
 \section{Step 10}
 %LTSpice
 \begin{figure}[H]
@@ -181,14 +275,37 @@ V(Volts) & I \\ [0.5ex]
    \caption{Regulation with zener diode circuit schematic for the Step 10}
 \end{figure} 
 
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{10SCH.png}
+   \caption{Regulation with zener diode circuit simulation schematic for the Step 10}
+\end{figure} 
+
+
 \section{Step 11}
 %LTSpice
 \begin{figure}[H]
     \centering
    \includegraphics[width=1\textwidth]{11_1.png}
-   \caption{Full-wave rectifier circuit schematic for the Step 11}
+   \caption{Clipper circuit schematic for the Step 11}
 \end{figure} 
 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{11SCH.png}
+\caption{Clipper circuit simulation schematic for the Step 11}
+\end{figure} 
+
+
+
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{11.png}
+   \caption{Clipper circuit simulation plot \(V_o\) }
+\end{figure} 
+
+\iffalse
 \section{Step 12}
 %LTSpice and BONUS
 
@@ -205,7 +322,7 @@ V(Volts) & I \\ [0.5ex]
    \includegraphics[width=1\textwidth]{12_2.png}
    \caption{i-v characteristics of a box for the Step 12 part b}
 \end{figure} 
-
+\fi
 \section{Conclusion}
 
 
@@ -233,9 +350,9 @@ V(Volts) & I \\ [0.5ex]
 
 %%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
- 	\centering
-	\includegraphics[width=1\textwidth]{5.png}
-	\caption{Circuit schematic for the step 5}
+\centering
+\includegraphics[width=1\textwidth]{5.png}
+\caption{Circuit schematic for the step 5}
 \end{figure} 
 
 %%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE FROM PDF   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
