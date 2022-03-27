@@ -31,9 +31,10 @@
 %abstract
 %\end{abstract}
 
-\section{Introduction} 
+%\section{Introduction}
+In this document the actions corresponding requirements defined in the Experiment Manual are  represented.
 \section{Step 1}
-Notes on signal generators, oscilloscopes and multimetersi are studied and reviewed the fundamentals.
+Notes on signal generators, oscilloscopes and multimeters are studied and reviewed the fundamentals.
 \section{Step 2}
 Notes on dioedes document is studied. The datasheets of the diodes to be used in this experiment are reviewed, which are \href{https://www.vishay.com/docs/88503/1n4001.pdf}{1N40007} , \href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159} ,\href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119} ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2}.   
 \section{Step 3}
@@ -222,7 +223,7 @@ Secondly, the input is adjusted as a square wave with 10 Volts. Then the plot gi
 As it can be observed the average value of the voltage across diode is appriximately -10 Volts. 
 
 \section{Step 6}
-For step 6 , the half wave rectifier circuit with a capacitive load is used the reference circuit is given in Figure 10. 
+For step 6 , the half wave rectifier circuit with a capacitive load is used the reference circuit is given in Figure 10. Also note that the plots wanted in the summary are given in Appendix B.
 \begin{figure}[H]
     \centering
    \includegraphics[width=1\textwidth]{6_1.png}
@@ -253,6 +254,7 @@ As a result of the simulation work, the plot in Figure 12 is obtained.
 
 \subsection{c)}
 %%%% TODO TODO TODO TODO
+As done in the Step 4, it can be said that \(V_r\) become equal to the \(V_{peak}\) . Also by the calculations mentioned in the Step 4 (assuming diode is ideal) \(V_{DC}\) becomes \[V_{DC} = \frac{1}{20 \pi^2}\]
 \section{Step 7}
 In step 7 the full-wave rectifier circuit is simulated according to the circuit schematic given in Figure 13.
 
@@ -410,6 +412,27 @@ It can be said that the circuit clips the peaks of the input.
 In conclusion, as the preliminary work of the first experiment. Some of the rectifier circuts with different diodes are investigated. In this way, various simulations are made. Different kinds of analysis' are done. Therefore their resutls are plotted.
 \section*{Appendix A}
 The results of the simulations are fetched from LTSpice and plotted in MATLAB in order to make the plots more readable and convinient.
+\section*{Appendix B}
+Figure 27 stands for no capacitor setup.
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{6_0F.png}
+   \caption{Half wave rectifier circuit simulation plot no capacitor \(V_o\) }
+\end{figure} 
+
+Figure 28 stands for 10nF capacitor setup.
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{6_10nF.png}
+   \caption{Half wave rectifier circuit simulation plot 10nF capacitor \(V_o\) }
+\end{figure} 
+Figure 29 stands for 1uF capacitor setup.
+\begin{figure}[H]
+    \centering
+   \includegraphics[width=1\textwidth]{6_1uF.png}
+   \caption{Half wave rectifier circuit simulation plot 1uF \(V_o\) }
+\end{figure} 
+
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%   EXAMPLE TABLE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
