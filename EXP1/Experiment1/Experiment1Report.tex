@@ -4,10 +4,11 @@
 \usepackage{float}
 \usepackage{pdfpages}
 
+
 \usepackage{graphicx} % takes care of graphic including machinery
 \graphicspath{ {./figures/} }
-\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
-\usepackage{cite} % takes care of citations
+%\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+%\usepackage{cite} % takes care of citations
 \usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
 \hypersetup{
 	colorlinks=true,       % false: boxed links; true: colored links
@@ -16,11 +17,21 @@
 	filecolor=magenta,     % color of file links
 	urlcolor =blue         
 }
+\usepackage[margin = 1in,headsep=0.5cm,headheight=2cm,letterpaper]{geometry} 
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Student 1 : Ahmet Akman 2442366 \\ Student 2: Yusuf Toprak Yıldıran 2444149 \\ Assistant: Onur Selim Kılıç}
+\rhead{Data: \today \\ Group: Wednesday Morning - 5}
+%\cfoot{center of the footer!}
+\renewcommand{\headrulewidth}{0.4pt}
+%
 
+\renewcommand{\footrulewidth}{0.4pt}
 
 
 \begin{document}
+\thispagestyle{empty}
 
 \title{Spring 2022 EE214 Experiment 1  \protect\\ Diodes and Rectifiers}
 \author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149}
@@ -31,12 +42,11 @@
 %abstract
 %\end{abstract}
 \section{Introduction}
-In this document the actions corresponding requirements defined in the Experiment Manual are  represented.
-
+In this experiment ,  characteristics of different  diodes ,and rectifiers are investigated. First the i-v characteristics of 3 different diodes are expected to be oobserved. Then, the behavior of the half wave is expected to be experimented. Lastly, observations are made on clamper and  zener regulator circuits. The results of the experimentation is presented in this document.
 \section{Experimental Results and Discussion}
-
+The results of the experiment are discussed in following steps.
 \subsection{Step 1}
-
+In this step, the circuit schematic given in Figure TODO is constructed on breadboard. As the signal supply, analog signal generator is used for floating output.
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\textwidth]{1_1.png}
@@ -44,6 +54,59 @@ In this document the actions corresponding requirements defined in the Experimen
 \end{figure} 
 
 \subsubsection{a)}
+%\href{https://www.vishay.com/docs/88503/1n4001.pdf}{1N40007} 
+The diode models, \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} are used. The probes of the oscilloscope is connected to the nodes indicated in Figure TODO. The resulting graph is plotted as given in Figure TODO2 TODO3 ,and TODO 4 for 
+\href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} respectively.
+Using those plots the piecewise parameters of the diodes are obtained by the virtue of the cursors of the oscilloscope. The parameters of diode AA119 is given in Table 1.
+
+\begin{table}[H]
+    \begin{center}
+    \caption{Piecewise parameters of diode AA119}
+    \vspace{2mm}
+    \begin{tabular}{|| c | c | c ||}
+    \hline
+    \(V_{on}\) & 350 mV \\
+    \hline 
+    \(r_f\) & 0.17 \(\Omega\) \\
+    \hline
+    \(r_r\) & 86 \(\Omega\)\\
+    \hline
+    \end{tabular}
+\end{center}
+\end{table}
+The obtained parameters of diode AA119 is given in Table 2.
+\begin{table}[H]
+    \centering
+    \caption{Piecewise parameters of diode BA159}
+    \vspace{2mm}
+    \begin{tabular}{||c | c | c||}
+    \hline
+    \(V_{on}\) & 973.5 mV \\
+    \hline
+    \(r_f\) & 0.625 \(\Omega\) \\
+    \hline
+    \(r_r\) & 86.2 \(\Omega\)\\
+    \hline
+    \end{tabular}
+\end{table}
+The obtained parameters of diode BZX55C-6V2 is given in Table 3.
+\begin{table}[H]
+    \centering
+    \caption{Piecewise parameters of diode BZX55C-6V2}
+    \begin{tabular}{||c | c | c||}
+        \hline
+    \(V_{on}\) & 752 mV \\
+    \hline
+    \(V_{z}\) & 5.92V \\
+    \hline
+    \(r_f\) & 0.05 \(\Omega\) \\
+    \hline
+    \(r_r\) & 0.156 \(\Omega\) \\
+    \hline
+    \end{tabular}
+\end{table}
+So, the pimple i-v characteristics of 3 different diodes are obtained ,and analyzed using the plot.
+
 \subsubsection{b)}
 
 
