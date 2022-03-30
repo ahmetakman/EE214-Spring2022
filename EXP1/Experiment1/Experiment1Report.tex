@@ -4,10 +4,11 @@
 \usepackage{float}
 \usepackage{pdfpages}
 
+
 \usepackage{graphicx} % takes care of graphic including machinery
 \graphicspath{ {./figures/} }
-\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
-\usepackage{cite} % takes care of citations
+%\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+%\usepackage{cite} % takes care of citations
 \usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
 \hypersetup{
 	colorlinks=true,       % false: boxed links; true: colored links
@@ -16,11 +17,21 @@
 	filecolor=magenta,     % color of file links
 	urlcolor =blue         
 }
+\usepackage[margin = 1in,headsep=0.5cm,headheight=2cm,letterpaper]{geometry} 
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Student 1 : Ahmet Akman 2442366 \\ Student 2: Yusuf Toprak Yıldıran 2444149 \\ Assistant: Onur Selim Kılıç}
+\rhead{Data: \today \\ Group: Wednesday Morning - 5}
+%\cfoot{center of the footer!}
+\renewcommand{\headrulewidth}{0.4pt}
+%
 
+\renewcommand{\footrulewidth}{0.4pt}
 
 
 \begin{document}
+\thispagestyle{empty}
 
 \title{Spring 2022 EE214 Experiment 1  \protect\\ Diodes and Rectifiers}
 \author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149}
@@ -49,22 +60,33 @@ The diode models, \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{A
 Using those plots the piecewise parameters of the diodes are obtained by the virtue of the cursors of the oscilloscope. The parameters of diode AA119 is given in Table 1.
 
 \begin{table}[H]
-    \centering
+    \begin{center}
     \caption{Piecewise parameters of diode AA119}
-    \begin{tabular}{||c | c | c||}
+    \vspace{2mm}
+    \begin{tabular}{|| c | c | c ||}
+    \hline
     \(V_{on}\) & 350 mV \\
+    \hline 
     \(r_f\) & 0.17 \(\Omega\) \\
-    \(r_r\) & 86 \(\Omega\)
+    \hline
+    \(r_r\) & 86 \(\Omega\)\\
+    \hline
     \end{tabular}
+\end{center}
 \end{table}
 The obtained parameters of diode AA119 is given in Table 2.
 \begin{table}[H]
     \centering
     \caption{Piecewise parameters of diode BA159}
+    \vspace{2mm}
     \begin{tabular}{||c | c | c||}
+    \hline
     \(V_{on}\) & 973.5 mV \\
+    \hline
     \(r_f\) & 0.625 \(\Omega\) \\
-    \(r_r\) & 86.2 \(\Omega\)
+    \hline
+    \(r_r\) & 86.2 \(\Omega\)\\
+    \hline
     \end{tabular}
 \end{table}
 The obtained parameters of diode BZX55C-6V2 is given in Table 3.
@@ -72,10 +94,15 @@ The obtained parameters of diode BZX55C-6V2 is given in Table 3.
     \centering
     \caption{Piecewise parameters of diode BZX55C-6V2}
     \begin{tabular}{||c | c | c||}
+        \hline
     \(V_{on}\) & 752 mV \\
+    \hline
     \(V_{z}\) & 5.92V \\
+    \hline
     \(r_f\) & 0.05 \(\Omega\) \\
-    \(r_r\) & 0.156 \(\Omega\)
+    \hline
+    \(r_r\) & 0.156 \(\Omega\) \\
+    \hline
     \end{tabular}
 \end{table}
 So, the pimple i-v characteristics of 3 different diodes are obtained ,and analyzed using the plot.
