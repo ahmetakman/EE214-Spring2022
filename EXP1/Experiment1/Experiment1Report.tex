@@ -109,6 +109,9 @@ So, the pimple i-v characteristics of 3 different diodes are obtained ,and analy
 
 \subsubsection{b)}
 
+
+We can call separation of lines in i-v graph as hysteresis effect. When we increase frequency to 10kHz, we observed hysteresis effect on the i-v characteristics of diode on the DSO screen. Since our diode can not change its state as fast as our high frequency voltage source supply, we observe this effect. To solve this problem and to be able to use diodes at high frequencies, there are "high speed" or "switching" diodes. These diodes can be used in high frequencies without observing hysteresis effect.
+
 \subsection{Step 2}
 
 \begin{figure}[H]
@@ -116,12 +119,27 @@ So, the pimple i-v characteristics of 3 different diodes are obtained ,and analy
     \includegraphics[width=1\textwidth]{2_1.png}
     \caption{Circuit schematic for the step 2}
 \end{figure} 
-    
+For this part, we set the half-wave rectifier circuit given in Figure X and adjusted 
+\(
+v_i(t)  = 2sin(2000 \pi t) V 
+\)
+
+
 \subsubsection{a)}
+After setting POT to \(1k\Omega\) , we obtain output and input voltage waveforms on the graph indicaded in Figure X.
+
+
+If we look at the graph carefully, we can realized that output voltage is slightly lower than input voltage since diode consumes energy. Then we measured the \(DC_{rms} \) of output value as 730mV using cursors of DSO. Output voltage waveform on the DSO screen is like same with the input waveform in positive cycles but zero when input is in the negative cycle.  
+
+
 \subsubsection{b)}
 
 
 \subsection{Step 3}
+
+In this third step, we set up the diode clamper circuit given in Figure X using the diode 1N4001 and set the voltage \(v_i(t) = 10sin(200\pi t) V\). Then plotted the input and output voltage waveforms on the graph given in Figure X.
+
+From above graph we can derive that output waveform is just shifted form of input waveform to below zero. Since diode prevent capacitor from discharged, in order peak value of output to be clamped above zero diode should go into negative bias.
 
 \begin{figure}[H]
     \centering
