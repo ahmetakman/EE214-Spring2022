@@ -46,6 +46,9 @@ In this document the actions corresponding requirements defined in the Experimen
 \subsubsection{a)}
 \subsubsection{b)}
 
+
+We can call separation of lines in i-v graph as hysteresis effect. When we increase frequency to 10kHz, we observed hysteresis effect on the i-v characteristics of diode on the DSO screen. Since our diode can not change its state as fast as our high frequency voltage source supply, we observe this effect. To solve this problem and use diodes at high frequencies, there are "high speed" or "switching" diodes. These diodes can be used in high frequencies without observing hysteresis effect.
+
 \subsection{Step 2}
 
 \begin{figure}[H]
@@ -53,8 +56,19 @@ In this document the actions corresponding requirements defined in the Experimen
     \includegraphics[width=1\textwidth]{2_1.png}
     \caption{Circuit schematic for the step 2}
 \end{figure} 
-    
+For this part, we set the half-wave rectifier circuit given in Figure X and adjusted 
+\(
+v_i(t)  = 2sin(2000 \pi t)  
+\)
+
+
 \subsubsection{a)}
+After setting POT to 1k\Omega , we obtain output and input voltage waveforms on the graph indicaded in Figure X.
+
+
+If we look at the graph carefully, we can realized that output voltage is slightly lower than input voltage since diode consumes energy. Then we measured the \(DC_{rms} \) of output value as 730mV using cursors of DSO. Output voltage waveform on the DSO screen is like same with the input waveform in positive cycles but zero when input is in the negative cycle.  
+
+
 \subsubsection{b)}
 
 
