@@ -57,6 +57,28 @@ In this step, the circuit schematic given in Figure TODO is constructed on bread
 %\href{https://www.vishay.com/docs/88503/1n4001.pdf}{1N40007} 
 The diode models, \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} are used. The probes of the oscilloscope is connected to the nodes indicated in Figure TODO. The resulting graph is plotted as given in Figure TODO2 TODO3 ,and TODO 4 for 
 \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} respectively.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{1_aa119.png}
+    \caption{i-v characteristics of AA119}
+\end{figure} 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{1_ba159.png}
+    \caption{i-v characteristics of BA159}
+\end{figure} 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{1_zener.png}
+    \caption{i-v characteristics of BZX55C-6V2}
+\end{figure} 
+
+
 Using those plots the piecewise parameters of the diodes are obtained by the virtue of the cursors of the oscilloscope. The parameters of diode AA119 is given in Table 1.
 
 \begin{table}[H]
@@ -109,6 +131,14 @@ So, the pimple i-v characteristics of 3 different diodes are obtained ,and analy
 
 \subsubsection{b)}
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{1_ba159_10khz.png}
+    \caption{i-v characteristics of BA159 at 10khz}
+\end{figure} 
+
+
 \subsection{Step 2}
 
 \begin{figure}[H]
@@ -118,7 +148,33 @@ So, the pimple i-v characteristics of 3 different diodes are obtained ,and analy
 \end{figure} 
     
 \subsubsection{a)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{2_a.png}
+    \caption{Half-wave rectifier with BA159}
+\end{figure} 
+
 \subsubsection{b)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{2_b_POT_1_2K.png}
+    \caption{Half-wave rectifier with BA159 with pot set to 1.2K \(\Omega\)}
+\end{figure} 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{2_b_POT_10K.png}
+    \caption{Half-wave rectifier with BA159 with pot set to 10K \(\Omega\)}
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{2_b_POT_18K.png}
+    \caption{Half-wave rectifier with BA159 with pot set to 18K \(\Omega\)}
+\end{figure} 
 
 
 \subsection{Step 3}
@@ -129,6 +185,12 @@ So, the pimple i-v characteristics of 3 different diodes are obtained ,and analy
     \caption{Circuit schematic for the step 3}
 \end{figure} 
     
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{3.png}
+    \caption{Clamper circuit output }
+\end{figure} 
     
 
 \subsection{Step 4}
@@ -146,7 +208,7 @@ asdfd
 \begin{itemize}
     \item PreLab Preprataion 6 hours
     \item Experimental Work 2  hours
-    \item Report Wrining 6 hours
+    \item Report Writing 6 hours
 \end{itemize}
 
 \end{document}
