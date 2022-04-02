@@ -22,19 +22,20 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{Student 1 : Ahmet Akman 2442366 \\ Student 2: Yusuf Toprak Yıldıran 2444149 \\ Assistant: Onur Selim Kılıç}
-\rhead{Data: \today \\ Group: Wednesday Morning - 5}
+\rhead{Date: \today \\ Group: Wednesday Morning - 5} 
 %\cfoot{center of the footer!}
-\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrulewidth}{0.1pt}
 %
 
-\renewcommand{\footrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
 
 
 \begin{document}
 \thispagestyle{empty}
 
 \title{Spring 2022 EE214 Experiment 1  \protect\\ Diodes and Rectifiers}
-\author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149}
+\author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 \protect\\ Assistant: Onur Selim Kılıç}
 \date{\today}
 \maketitle
 \tableofcontents
@@ -42,11 +43,11 @@
 %abstract
 %\end{abstract}
 \section{Introduction}
-In this experiment ,  characteristics of different  diodes ,and rectifiers are investigated. First the i-v characteristics of 3 different diodes are expected to be observed. Then, the behavior of the half wave is expected to be experimented. Lastly, observations are made on clamper and  zener regulator circuits. The results of the experimentation is presented in this document.
+In this experiment, the characteristics of different diodes and rectifiers are investigated. First, the i-v characteristics of 3 different diodes are expected to be observed. Then, the behavior of the half-wave is expected to be experimented with. Lastly, observations are made on clamper and zener regulator circuits. The results of the experimentation are presented in this document.
 \section{Experimental Results and Discussion}
-The results of the experiment are discussed in following steps.
+The results of the experiment are discussed in the following steps.
 \subsection{Step 1}
-In this step, the circuit schematic given in Figure 1 is constructed on breadboard. As the signal supply, analog signal generator is used for floating output.
+In this step, the circuit schematic given in Figure 1 is constructed on the breadboard. The analog signal generator is used for floating output as the signal supply.
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.75\textwidth]{1_1.png}
@@ -55,8 +56,7 @@ In this step, the circuit schematic given in Figure 1 is constructed on breadboa
 
 \subsubsection{a)}
 %\href{https://www.vishay.com/docs/88503/1n4001.pdf}{1N40007} 
-The diode models, \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},\href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} are used. The probes of the oscilloscope is connected to the nodes indicated in Figure 1. The resulting graph is plotted as given in Figure 2 , 3 ,and 4 for 
-\href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},\href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} respectively.
+The diode models, \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},\href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} are used. The probes of the oscilloscope is connected to the nodes indicated in Figure 1. The resulting graph is plotted as given in Figure 2 , 3 ,and 4 for \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{AA119},\href{https://www.vishay.com/docs/88536/ba157.pdf}{BA159}  ,and \href{https://www.vishay.com/docs/85604/bzx55.pdf}{BZX55C-6V2} respectively.
 
 \begin{figure}[H]
     \centering
@@ -79,7 +79,7 @@ The diode models, \href{https://logosfoundation.org/elektron/mixers/AA119.pdf}{A
 \end{figure} 
 
 
-Using those plots the piecewise parameters of the diodes are obtained by the virtue of the cursors of the oscilloscope. The parameters of diode AA119 is given in Table 1.
+Using those plots, the piecewise parameters of the diodes are obtained by virtue of the cursors of the oscilloscope. The parameters of diode AA119 are given in Table 1.
 
 \begin{table}[H]
     \begin{center}
@@ -96,7 +96,7 @@ Using those plots the piecewise parameters of the diodes are obtained by the vir
     \end{tabular}
 \end{center}
 \end{table}
-The obtained parameters of diode AA119 is given in Table 2.
+The obtained parameters of diode AA119 are given in Table 2.
 \begin{table}[H]
     \centering
     \caption{Piecewise parameters of diode BA159}
@@ -111,7 +111,7 @@ The obtained parameters of diode AA119 is given in Table 2.
     \hline
     \end{tabular}
 \end{table}
-The obtained parameters of diode BZX55C-6V2 is given in Table 3.
+The obtained parameters of diode BZX55C-6V2 are given in Table 3.
 \begin{table}[H]
     \centering
     \caption{Piecewise parameters of diode BZX55C-6V2}
@@ -128,17 +128,17 @@ The obtained parameters of diode BZX55C-6V2 is given in Table 3.
     \hline
     \end{tabular}
 \end{table}
-So, the simple i-v characteristics of 3 different diodes are obtained ,and analyzed using the plot.
+So, the fundamental i-v characteristics of 3 different diodes are obtained and analyzed using the plot.
 
 \subsubsection{b)}
-In this part the frequency of the signal generator is adjusted and the i-v characteristics is observed again. The plot given in Figure 5 is obtained.
+In this part, the frequency of the signal generator is adjusted, and the i-v characteristics are observed again. The plot given in Figure 5 is obtained.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{1_ba159_10khz.png}
     \caption{i-v characteristics of BA159 at 10khz}
 \end{figure} 
-It can said that there is a slight seperation on horizontal lines in plot different than lower frequency plot. We can call separation of lines in this i-v graph as hysteresis effect. When we increase frequency to 10kHz, we observed hysteresis effect on the i-v characteristics of diode on the DSO screen. Since our diode can not change its state as fast as our high frequency voltage source supply, we observe this effect. To solve this problem and to be able to use diodes at high frequencies, there are "high speed" or "switching" diodes. These diodes can be used in high frequencies without observing hysteresis effect.
+It can be said that there is a slight separation on horizontal lines in a plot different than the lower frequency plot. We can call the separation of lines in this i-v graph as hysteresis effect. When we increased the frequency to 10kHz, we observed a hysteresis effect on the i-v characteristics of the diode on the DSO screen. We observe this effect since our diode can not change its state as fast as our high-frequency voltage source supply. To solve this problem and to be able to use diodes at high frequencies, there are "high speed" or "switching" diodes. These diodes can be used in high frequencies without observing the hysteresis effect.
 
 \subsection{Step 2}
 
@@ -147,7 +147,7 @@ It can said that there is a slight seperation on horizontal lines in plot differ
     \includegraphics[width = 0.75\textwidth]{2_1.png}
     \caption{Circuit schematic for the step 2}
 \end{figure} 
-For this part, we set the half-wave rectifier circuit given in Figure X and adjusted signal generator as 
+For this part, we set the half-wave rectifier circuit given in Figure 6 and adjusted signal generator as 
 \(
 v_i(t)  = 2sin(2000 \pi t) V 
 \)
@@ -165,35 +165,35 @@ POT is set to \(1k\Omega\) , and output and input voltage waveforms on the graph
 
 
 
-If one look at the graph carefully, it can be realized that output voltage is slightly lower than input voltage since diode consumes energy ,so has an internal resistance. Then we measured the \(DC_{rms} \) of output value as 730mV using cursors of DSO. Output voltage waveform on the DSO screen is in similar shape with the input waveform in positive cycles but zero when input is in the negative cycle.  
+If one looks at the graph carefully, it can be realized that the output voltage is slightly lower than the input voltage since the diode consumes energy, so it has an internal resistance. Then we measured the \(DC_{rms} \) of output value as 730mV using cursors of DSO. The output voltage waveform on the DSO screen is in a similar shape to the input waveform in positive cycles but zero when input is in the negative cycle.  
 
 
 \subsubsection{b)}
-In this part in addition to the circuit given in Figure 6, a capacitor of 10\(\mu\)F is connected parallel to the potentiometer. Also the input signal is adjusted to \(10 sin(20 \pi t) \). First POT is set to \(10k\Omega\) , and output and input voltage waveforms on the graph presented in Figure 8 is obtained.
+In this part, in addition to the circuit given in Figure 6, a capacitor of 10\(\mu\)F is connected parallel to the potentiometer. Also the input signal is adjusted to \(10 sin(20 \pi t) \). First, POT is set to \(10k\Omega\), and output and input voltage waveforms on the graph presented in Figure 8 are obtained.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{2_b_POT_10K.png}
     \caption{Half-wave rectifier with BA159 with pot set to 10K \(\Omega\)}
 \end{figure} 
-For this plot it can be said that because of the dischaging process of the capacitor the falling edge of output signal is different than the case without capacitor. 
-The pot is adjusted to maximum (18K\(\Omega\)) ,and the plot given in Figure 9 is obtained.
+For this plot, it can be said that because of the discharging process of the capacitor, the falling edge of the output signal is different from the case without a capacitor. 
+The pot is adjusted to a maximum (18K\(\Omega\)), and the plot given in Figure 9 is obtained.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{2_b_POT_18K.png}
     \caption{Half-wave rectifier with BA159 with pot set to 18K \(\Omega\)}
 \end{figure} 
-Here it can be said that ripple voltage is decreased as moved from 10K\(\Omega\).
-Lastly, the potentiometer is set to minimum (1.2K\(\Omega\)). The plot given in Figure 10 is obtained. 
+Here it can be said that ripple voltage is decreased as it moved from 10K\(\Omega\).
+Lastly, the potentiometer is set to a minimum (1.2K\(\Omega\)). The plot given in Figure 10 is obtained. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{2_b_POT_1_2K.png}
     \caption{Half-wave rectifier with BA159 with pot set to 1.2K \(\Omega\)}
 \end{figure} 
-Here the ripple voltage is higher than other cases and equal to the case in which capacitor is absent.
+Here the ripple voltage is higher than in other cases and equal to the case in which the capacitor is absent.
 
-As a result the \(V_{DC}\) , \( V_r \) values are recorded  and given in Table 4.
+As a result, the \(V_{DC}\), \( V_r \) values are recorded and given in Table 4.
 
 \begin{table}[H]
     \centering
@@ -211,11 +211,11 @@ As a result the \(V_{DC}\) , \( V_r \) values are recorded  and given in Table 4
     \hline
     \end{tabular}
 \end{table}
-To decrease the ripple voltage in the case of constant resistance there are three options that can be done. First the capacitance of the capacitor can be increased so that it would take longer for resistor to consume its energy. Secondly, if the frequency of the input is inscreased the time interval of discharging is drops so ripple voltage may decrease. Lastly, even though it is not feasible ,a diode with a higher internal capacitance can be used to decrease ripple voltage.
+To decrease the ripple voltage in the case of constant resistance, there are three options that can be done. First, the capacitance of the capacitor can be increased so that it would take longer for the resistor to consume its energy. Secondly, if the frequency of the input is increased, the time interval of discharging drops, so ripple voltage may decrease. Lastly, even though it is not feasible, a diode with a higher internal capacitance can be used to decrease ripple voltage.
 
 \subsection{Step 3}
 
-In this third step, we set up the diode clamper circuit given in Figure 11 using the diode 1N4001 and set the voltage \(v_i(t) = 10sin(200\pi t) V\). Then plotted the input and output voltage waveforms on the graph given in Figure 12.
+In this third step, we set up the diode clamper circuit given in Figure 11 using the diode 1N4001 and set the voltage \(v_i(t) = 10sin(200\pi t) V\). Then it is plotted the input and output voltage waveforms on the graph given in Figure 12.
 
 \begin{figure}[H]
     \centering
@@ -230,14 +230,13 @@ In this third step, we set up the diode clamper circuit given in Figure 11 using
     \caption{Clamper circuit output }
 \end{figure} 
     
-From above graph we can derive that output waveform is just shifted form of input waveform to below zero. Since diode prevent capacitor from discharged, in order peak value of output to be clamped above zero diode should go into negative bias.
+From the above graph, we can derive that the output waveform is slightly shifted from of input waveform to below zero. Since the diode prevents the capacitor from being discharged, the peak value of output to be clamped above zero diodes should go into negative bias.
 
 
 
 \subsection{Step 4}
 
-In this last part, we set the circuit given in Figure 13 with the the load
-resistance \( (100\Omega+1k\Omega POT) \) where \(R_L\) varies between 600-1100\(\Omega\). While we are changing potentiometer resistance from minimum to maximum (100 to 1000\(\Omega\)), first output voltage has started to increase from 4V to 6V and then, We observed a constant output voltage of 6V even as we continue to increase \(R_L\) resistance. From these results, we can conclude that zener diode gives constant output in reverse bias high voltages hence, zener diode has a regulation effect. 
+In this last part, we set the circuit given in Figure 13 with the load resistance \( (100\Omega+1k\Omega POT) \) where \(R_L\) varies between 600-1100\(\Omega\). While we are changing potentiometer resistance from minimum to maximum (100 to 1000\(\Omega\)), the first output voltage has started to increase from 4V to 6V, and then, We observed a constant output voltage of 6V even as we continued to increase \(R_L\) resistance. From these results, we can conclude that the zener diode gives constant output in reverse bias high voltages. Hence, zener diode has a regulation effect. 
 
 \begin{figure}[H]
     \centering
@@ -247,7 +246,9 @@ resistance \( (100\Omega+1k\Omega POT) \) where \(R_L\) varies between 600-1100\
     
     
 \section{Conclusion}
-asdfd
+
+THIS WAS LEFT 
+
 \section*{Appendix A}
 \begin{itemize}
     \item PreLab Preprataion 6 hours
