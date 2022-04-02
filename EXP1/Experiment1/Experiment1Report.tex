@@ -196,9 +196,7 @@ If we look at the graph carefully, we can realized that output voltage is slight
 
 \subsection{Step 3}
 
-In this third step, we set up the diode clamper circuit given in Figure X using the diode 1N4001 and set the voltage \(v_i(t) = 10sin(200\pi t) V\). Then plotted the input and output voltage waveforms on the graph given in Figure X.
-
-From above graph we can derive that output waveform is just shifted form of input waveform to below zero. Since diode prevent capacitor from discharged, in order peak value of output to be clamped above zero diode should go into negative bias.
+In this third step, we set up the diode clamper circuit given in Figure 11 using the diode 1N4001 and set the voltage \(v_i(t) = 10sin(200\pi t) V\). Then plotted the input and output voltage waveforms on the graph given in Figure 12.
 
 \begin{figure}[H]
     \centering
@@ -213,8 +211,14 @@ From above graph we can derive that output waveform is just shifted form of inpu
     \caption{Clamper circuit output }
 \end{figure} 
     
+From above graph we can derive that output waveform is just shifted form of input waveform to below zero. Since diode prevent capacitor from discharged, in order peak value of output to be clamped above zero diode should go into negative bias.
+
+
 
 \subsection{Step 4}
+
+In this last part, we set the circuit given in figure 13 with the the load
+resistance \( (100\Omega+1k\Omega POT) \) where \(R_L\) varies between 600-1100\(\Omega\). While we are changing potentiometer resistance from minimum to maximum (100 to 1000\(\Omega\)), first output voltage has started to increase from 4V to 6V and then, We observed a constant output voltage of 6V even as we continue to increase \(R_L\) resistance. From these results, we can conclude that zener diode gives constant output in reverse bias high voltages hence, zener diode has a regulation effect. 
 
 \begin{figure}[H]
     \centering
