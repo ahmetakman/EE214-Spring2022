@@ -79,16 +79,34 @@ In this step the
 
 \subsection{Step 3}
 
-
+In this part we set the negative resistance converter circuit given in the figure X below.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{3SCH.png}
     \caption{Circuit schematic for the step 3}
 \end{figure} 
 
+  
 \subsubsection{a)}
+For this part a, we used 1.2k\(\Omega\) instead of the \(R_2\) 2.7k\(\Omega\) pot and adjusted the V as \(V(t) = 10sin(\pi t)V\) and obtained the i vs v characteristics by using DSO in X-Y mode. To obtain current i, we connceted 1k\(\Omega\) resistor between common ground and non-inverting input port of the op-amp and measured the voltage accross it, by doing this, we get the current in mA. Also voltage v is obtained by measuring the input signal. From oscilloscope it can be seen that op-amp goes into + saturation or - saturation without being into linear region and circuit is unstable.
 
 \subsubsection{b)}
+In this subsection b. a 1\(\mu F\) capacitor is connected accross the terminals between this one port circuit and \(R_2 \) and \(R_4 \) are adjusted untill \(V_0(t)\) become a square wave of 2 volts peak-to-peak with frequency of 500Hz. Then, \(R_2 \) and \(R_4 \) are recorded as table which is given in the figure X. It can be observed that experimental values are consistent with the preliminary work results given in figure X.
+
+
+\begin{table}[H]
+    \begin{center}
+        \caption{Resistance reading by color code convention.}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c ||} 
+            \hline
+            \(R_2\) & \(R_4\) &  \(\tau \) \\ [0.5ex] 
+            \hline\hline
+            0.46k\(\Omega\) & 2.4k\(\Omega\) &  1.8x\(10^-6\)s \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
 
 \section{Conclusion}
 
