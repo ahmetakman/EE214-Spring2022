@@ -43,7 +43,7 @@
 %abstract
 %\end{abstract}
 \section{Introduction}
-In this experiment, miscellaneous op-amp circuits, three different setups of op-amp circuity are investigated. First, an independent current source circuit is set and its behavior is required to be characterized. Then the clipper circuit is constructed, and the output is needed to be observed. Lastly, a negative resistance converter with two zener is built with two different setups. First, its i-v characteristics are expected to be observed, then a square wave generator is expected to be set.
+In this experiment, miscellaneous op-amp circuits and three different setups of op-amp circuity are investigated. First, an independent current source circuit is set, and its behavior is required to be characterized. Then the clipper circuit is constructed, and the output is needed to be observed. Lastly, a negative resistance converter with two zener is built with two different setups. First, its i-v characteristics are expected to be observed; then, a square wave generator is expected to be set.
 \section{Experimental Results and Discussion}
 The results of the experiment are discussed in the following steps.
 \subsection{Step 1}
@@ -53,10 +53,10 @@ In this step independent current source circuit given in Figure 1 is constructed
     \includegraphics[width = 0.75\textwidth]{1SCH.png}
     \caption{Circuit schematic for the step 1}
 \end{figure} 
-To be able to obtain the maximum value of the resistance in which the one port still functions as a independent current source, the potentiometer is meticulously adjusted. So , the parameters given in Figure 1 is obtained.
+To be able to obtain the maximum value of the resistance in which the one port still functions as an independent current source, the potentiometer is meticulously adjusted. So, the parameters given in Table 1 are obtained.
 \begin{table}[H]
     \begin{center}
-        \caption{Resistance reading by color code convention.}
+        \caption{Liner region boundary parameters}
         \vspace{2mm}
         \begin{tabular}{||c | c ||} 
             \hline
@@ -68,14 +68,22 @@ To be able to obtain the maximum value of the resistance in which the one port s
     \end{center}
 \end{table}
 
+As a result, it can be concluded that the independent current source circuit functions as long as it is in the linear region; however when the op-amp saturates, it is no longer works. So, the circuit acts as an independent current source with 1.24mA until the load resistance is 8k\(\Omega\). 
 \subsection{Step 2}
-In this step the 
-
+In this step, the clipper circuitry given in Figure 3 is constructed. \(V_{in}\) is set to \(3 sin (1000\pi t)\) from the signal generator.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{2SCH.png}
-    \caption{Circuit schematic for the step 2}
+    \caption{Clipper circuit schematic for the step 2}
 \end{figure} 
+The plot given in Figure 4 is obtained as a result of \(V_o\) vs \(V_{in}\).
+%TODO THE NAME OF THE PLOT FİLE BELOW SHOULD BE CHANGED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2SCH.png}
+    \caption{\(V_o\) vs \(V_{in}\)}
+\end{figure} 
+So it is observed that saturation voltages are not +12 and -12 Volts. This result is stemmed from the fact that in saturation regions, zener diodes are both open, but one from forwarding and another from the reverse. Which results in the sum of their forward opening voltage (\(\approx\)  1V ) and reverse-opening voltage ( \( \approx \) 6V ) to be 7 Volts. In the saturation region, they switch the forward-reverse and results in \( \approx\) 14V\(V_{pp}\)
 
 \subsection{Step 3}
 
@@ -109,9 +117,7 @@ In this subsection b. a 1\(\mu F\) capacitor is connected accross the terminals 
 \end{table}
 
 \section{Conclusion}
-
-helll
-rfgtgtgtgt
+In this experiment, miscellaneous op-amp circuits have experimented with three different op-amp setups: independent current source, clipper, and negative resistance converter. First, it is observed where the independent current source works and the maximum load resistance obtained. Then it is observed that the behavior of the clipper circuit explained the reason why saturation regions are different. Lastly, a negative resistance circuit is constructed. Its one port i-v characteristics are obtained, then a square wave generator is configured with the same setup with the help of a capacitor. The target frequency and amplitude values are achieved, and the variables are noted. To sum up, in this experiment, three different setups of the op-amp are investigated.
 \section*{Appendix A}
 \begin{itemize}
     \item PreLab Preparation 4 hours
