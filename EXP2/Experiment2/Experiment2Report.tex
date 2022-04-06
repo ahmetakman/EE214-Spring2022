@@ -96,15 +96,20 @@ In this part we set the negative resistance converter circuit given in the figur
 
   
 \subsubsection{a)}
-For this part a, we used 1.2k\(\Omega\) instead of the \(R_2\) 2.7k\(\Omega\) pot and adjusted the V as \(V(t) = 10sin(\pi t)V\) and obtained the i vs v characteristics by using DSO in X-Y mode. To obtain current i, we connceted 1k\(\Omega\) resistor between common ground and non-inverting input port of the op-amp and measured the voltage accross it, by doing this, we get the current in mA. Also voltage v is obtained by measuring the input signal. From oscilloscope it can be seen that op-amp goes into + saturation or - saturation without being into linear region and circuit is unstable.
+For this part a., we used 1.2k\(\Omega\) instead of the \(R_2\) 2.7k\(\Omega\) pot and adjusted the V as \(V(t) = 10sin(\pi t)V\) and obtained the i vs v characteristics by using DSO in X-Y mode in figure X. To obtain current i, we connceted 1k\(\Omega\) resistor between common ground and non-inverting input port of the op-amp and measured the voltage accross it, by doing this, we get the current in mA. Also voltage v is obtained by measuring the input signal. From oscilloscope it can be seen that op-amp goes into + saturation or - saturation without being into linear region and circuit is unstable.
+%TODO THE NAME OF THE PLOT FİLE BELOW SHOULD BE CHANGED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2SCH.png}
+    \caption{\(i(t)\) vs \(V_{t}\)}
+\end{figure} 
+
 
 \subsubsection{b)}
-In this subsection b. a 1\(\mu F\) capacitor is connected accross the terminals between this one port circuit and \(R_2 \) and \(R_4 \) are adjusted untill \(V_0(t)\) become a square wave of 2 volts peak-to-peak with frequency of 500Hz. Then, \(R_2 \) and \(R_4 \) are recorded as table which is given in the figure X. It can be observed that experimental values are consistent with the preliminary work results given in figure X.
-
-
+In this subsection b. a 1\(\mu F\) capacitor is connected accross the terminals between this one port circuit and \(R_2 \) and \(R_4 \) are adjusted untill \(V_0(t)\) become a square wave of 2 volts peak-to-peak with frequency of 500Hz. Then, \(R_2 \) and \(R_4 \) are recorded using digital multimeter as a table which is given in the figure X. It can be observed that experimental values are partially consistent with the preliminary work results given in figure X. Also time constant \(\tau\) is found by multiplying \(R_f\) with the capacitance of the capacitor given in figure X. 
 \begin{table}[H]
     \begin{center}
-        \caption{Resistance reading by color code convention.}
+        \caption{Experimental Results of \(R_2\),\(R_4\) and \(\tau \).}
         \vspace{2mm}
         \begin{tabular}{||c | c | c ||} 
             \hline
@@ -115,6 +120,32 @@ In this subsection b. a 1\(\mu F\) capacitor is connected accross the terminals 
         \end{tabular}
     \end{center}
 \end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \caption{Preliminary Work Results of \(R_2\)and \(R_4\).}
+        \vspace{2mm}
+        \begin{tabular}{||c | c ||} 
+            \hline
+            \(R_2\) & \(R_4\) \\ [0.5ex] 
+            \hline\hline
+            1.63k\(\Omega\) & 2k\(\Omega\)   \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+
+Then \(V_C(t)\) and \(V_0(t)\) are observed on the DSO screen as seen in figure X.
+From this part b. it can be said that an adjustable square wave signal can be obtained without applying a input signal to negative resistance converter and frequency of this signal can be adjusted by changing the potantiometer \(R_2\) and amplitude can be ajusted by changing the \(R_4\).
+%TODO THE NAME OF THE PLOT FİLE BELOW SHOULD BE CHANGED
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2SCH.png}
+    \caption{\(V_C(t)\) vs \(V_0(t)\)}
+\end{figure} 
+
 
 \section{Conclusion}
 In this experiment, miscellaneous op-amp circuits have experimented with three different op-amp setups: independent current source, clipper, and negative resistance converter. First, it is observed where the independent current source works and the maximum load resistance obtained. Then it is observed that the behavior of the clipper circuit explained the reason why saturation regions are different. Lastly, a negative resistance circuit is constructed. Its one port i-v characteristics are obtained, then a square wave generator is configured with the same setup with the help of a capacitor. The target frequency and amplitude values are achieved, and the variables are noted. To sum up, in this experiment, three different setups of the op-amp are investigated.
