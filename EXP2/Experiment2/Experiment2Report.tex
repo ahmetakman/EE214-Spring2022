@@ -106,7 +106,17 @@ For this part a., we used 1.2k\(\Omega\) instead of the \(R_2\) 2.7k\(\Omega\) p
 
 
 \subsubsection{b)}
-In this subsection b. a 1\(\mu F\) capacitor is connected across the terminals between this one port circuit and \(R_2 \) and \(R_4 \) are adjusted until \(V_0(t)\) become a square wave of 2 volts peak-to-peak with the frequency of 500Hz. Then, \(R_2 \) and \(R_4 \) are recorded using a digital multimeter as a table which is given in the Table 2. It can be observed that experimental values are partially consistent with the preliminary work results given in Table 3. Also time constant \(\tau\) is found by multiplying \(R_f\) with the capacitance of the capacitor given in Table 2. 
+In this subsection b. a 1\(\mu F\) capacitor is connected across the terminals between this one port circuit and \(R_2 \) and \(R_4 \) are adjusted until \(V_0(t)\) become a square wave of 2 volts peak-to-peak with the frequency of 500Hz. Then, \(R_2 \) and \(R_4 \) are recorded using a digital multimeter as a table which is given in the Table 2. It can be observed that experimental values are partially consistent with the preliminary work results given in Table 3. Also time constant \(\tau\) is found by doing following calculations:
+
+\(V_c(t) = V_{final} + (V_{initial} - V_{final})e^{-t/\tau }\) 
+where \(V_{final} = 12V\) and \(V_{initial} = 0V\) since maximum capacitor voltage can reach at most 12V.
+Then, by selecting 2 points (0,0) and (0.00047,2.62) from figure 6 we get \(\Delta t = 47ms\) and \(V_c(t) = 2.62V\) 
+Afterwards, \(\tau\) is calculated as follows:
+\(\tau =( -0.00047/ \ln (9.4/12) \) )s  and given in Table 2.
+
+
+
+
 \begin{table}[H]
     \begin{center}
         \caption{Experimental Results of \(R_2\),\(R_4\) and \(\tau \).}
@@ -115,7 +125,7 @@ In this subsection b. a 1\(\mu F\) capacitor is connected across the terminals b
             \hline
             \(R_2\) & \(R_4\) &  \(\tau \) \\ [0.5ex] 
             \hline\hline
-            0.46k\(\Omega\) & 2.4k\(\Omega\) &  1.8x\(10^-6\)s \\
+            0.46k\(\Omega\) & 2.4k\(\Omega\) &  1.93x\(10^{-3}\)s \\
             \hline
         \end{tabular}
     \end{center}
