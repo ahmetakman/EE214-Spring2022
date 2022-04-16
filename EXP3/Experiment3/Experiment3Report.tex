@@ -45,41 +45,17 @@
 The results of the experiment are discussed in the following steps.
 %
 \subsection{Step 1}
-In this step transformer circuit with no resistive load is examined.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{1.png}
-    \caption{Circuit schematic for the step 1}
-\end{figure} 
-    
+
 In first step, following circuit given in Figure X is set and it is observed that step-down operation of the tansformer under no load with sinusoidal input voltage which has a peak to peak voltage of 20 V and frequency of
 50 Hz. Then, \(V_in(t) \) and \(V_out(t)\) are plotted on the graph in Figure X.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{1_1.png}
-    \caption{\(V_in(t) \) and \(V_out(t)\) vs Time}
-\end{figure} 
+
 Afterwards, \(N_1:N_2\) ratio is measured as \(19.5/2.5 \approx 7.8 \).
 
 %
 \subsection{Step 2}
-In this step transformer circuit with a resistive load is examined.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{2.png}
-    \caption{Circuit schematic for the step 2}
-\end{figure} 
-
 For this step, signal generator output is adjusted as \(𝑉_s = 10sin(2\pi50𝑡)\) with 20V peak to peak voltage and 50Hz frequency ;then, Transformer circuit with resistive load is constructed as given in the Figure X where R = \(56\Omega \).  
 \subsubsection{i}
-
 In this step, to obtain current \(I_in\), \(1K\Omega \) resistor is connected between - terminal of primary side transformer and - terminal of signal generator. Then, CH1 is connected to + terminal of the signal generator and CH2 probe is to the - terminal of primary side transformer. By subtracting CH2 from CH1 \(V_in\) is obtained, and CH2 probe of DSO gives \(I_in\) in mA. Afterwards, \(V_in\) and \(I_in\) are plotted in Figure X. Then, \(V_rms\) and \(I_rms\) are obtained using DSO measurement tool as 3.5V and 3.7mA respectively given in figure X. 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{2_1.png}
-    \caption{\(V_in(t) \) and \(I_in(t)\) vs Time}
-\end{figure} 
-
 \begin{table}[H]
     \begin{center}
         \caption{RMS Values of input \(V_rms\) and input \(I_rms\)}
@@ -94,64 +70,36 @@ In this step, to obtain current \(I_in\), \(1K\Omega \) resistor is connected be
     \end{center}
 \end{table}
 
-
-
 \subsubsection{ii}
-For this step CH1 is connected to + terminal of secondary side of the transformer , \(V_out(t)\) is plotted 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{2_2.png}
-    \caption{\(V_o(t) \) vs Time}
-\end{figure} 
-
+For this step CH1 is connected to + terminal of secondary side of the transformer , and from that probe \(V_out(t)\) is obtained and plotted as in Figure X. Then, rms value of \(V_out\) is measured with DSO as 555mV.
 \subsubsection{iii}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{2_3_1.png}
-    \caption{\(V_in(t) \) and \(I_in(t)\) vs Time (500Hz)}
-\end{figure} 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{2_3_2.png}
-    \caption{\(V_o(t) \) vs Time (500Hz)}
-\end{figure} 
+In this step, input frequency is increased to 500 Hz and i. and ii. are repeated. In previous steps (i. and ii.) phase difference between voltage and current was measured as \(-40\deg \) and when frequency is increased to 500 Hz phase difference is obtained as \(-25\deg\). Therefore, it is clearly seen that as frequency increase phase difference between voltage and current decreases. But after some point, although the frequency continues to increase, rate of change in phase difference decreases less and less.
 %
 \subsection{Step 3}
 
 \subsubsection{i}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{3_1.png}
-    \caption{\(V_in(t) \) and \(I_in(t)\) vs Time }
-\end{figure} 
-
 \subsubsection{ii}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{2.png}
-    \caption{Transformer equivalent circuit}
-\end{figure} 
+
 %
 \subsection{Step 4}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{3.png}
-    \caption{Impedance matching}
-\end{figure} 
+In this step impedance matching transformer circuit is constructed as if in Figure X with the input \(V_in(t) = 10sin(2\pi50t)\) and same \(N_1:N_2\) rate. 
 
 \subsubsection{i}
+For this step, impedance matching transformer circuit is used. In order to obtain \(V_out\) CH1 is connected + terminal of secondary side of the transformer and power dissipated on is calculated as follows:
+\[\frac{V^2}{R} = \frac{(V_rms)^2}{R} = \frac{0.216^2}{10\Omega }\] = 0.0046 Watt  
+
 \subsubsection{ii}
+For this step, 1K\(\Omega \) and 10\(\Omega \) resistors are connected series without the transformer and same calculation is made in i. :
+ \(4.9 x 10^-4\)Watt.
 
 
 \section{Conclusion}
 
 \section*{Appendix A}
 \begin{itemize}
-    \item PreLab Preparation 1 hours
+    \item PreLab Preparation 4 hours
     \item Experimental Work 2  hours
-    \item Report Writing 5 hours
+    \item Report Writing 4 hours
 \end{itemize}
 
 \end{document}
