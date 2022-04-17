@@ -83,23 +83,23 @@ In this step, to obtain current \(I_{in}\), \(1K\Omega \) resistor is connected 
     \includegraphics[width = 1\textwidth]{2_1.png}
     \caption{\(V_in(t) \) and \(I_in(t)\) vs Time}
 \end{figure} 
-Then, \(V_{rms}\) and \(I_{rms}\) are obtained using the DSO measurement tool as 3.5V and 3.7mA, respectively, given in Table 1.
+Then, \(V_{rms}\), \(I_{rms}\) and \(P_{in}\)(\(P_{in}\) = \(V_{rms} \times\)\(I_{rms}\) )  are obtained using the DSO measurement tool as 3.5V and 3.7mA, respectively, given in Table 1.
 \begin{table}[H]
     \begin{center}
-        \caption{RMS Values of input \(V_{rms}\) and input \(I_{rms}\)}
+        \caption{RMS Values of input \(V_{rms}\) and input \(I_{rms}\) and \(P_{in}\)}
         \vspace{2mm}
-        \begin{tabular}{||c | c ||} 
+        \begin{tabular}{||c | c | c ||} 
             \hline
-            \(V_{rms}\) & \(I_{rms}\) \\ [0.5ex] 
+            \(V_{rms}\) & \(I_{rms}\) & \(P_{in}\) \\ [0.5ex] 
             \hline\hline
-            3.5 V & 3.7 mA    \\
+            3.5 V & 3.7 mA & 12.95mW   \\
             \hline
         \end{tabular}
     \end{center}
 \end{table}
 
 \subsubsection{ii}
-For this step, CH1 is connected to the + terminal of the secondary side of the transformer, and from that, probe \(V_{out}(t)\) is obtained and plotted as in Figure 5. Then, the RMS value of \(V_{out}\) is measured with DSO as 555mV.
+For this step, CH1 is connected to the + terminal of the secondary side of the transformer, and from that, probe \(V_{out}(t)\) is obtained and plotted as in Figure 5. Then, the RMS value of \(V_{out}\) is measured with DSO as 555mV. Then, \(P_{out}\) is calculated as \(\frac{V_{out}^2}{56\Omega } = 5.5mW\). The reason for \(P_{out}\) is less than \(P_{in}\) is because the circuit is not ideal.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1\textwidth]{2_2.png}
