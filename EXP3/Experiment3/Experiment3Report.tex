@@ -118,9 +118,9 @@ For this step CH1 is connected to + terminal of secondary side of the transforme
 \end{figure} 
 %
 \subsection{Step 3}
-
+In this step transformer equivalent circuit is formulated by making the secondary terminal of the transformer short circuited.
 \subsubsection{i}
-
+By connecting a 1\(\Omega\) resistor series to the primary terminal we have obtained the plot given in Figure X which shows \(V_in(t) \) and \(I_in(t)\) on the same graph.  
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{3_1.png}
@@ -128,12 +128,41 @@ For this step CH1 is connected to + terminal of secondary side of the transforme
 \end{figure} 
 
 \subsubsection{ii}
+To obtain the equivalent circuit parameters given in Figure X. Bunch of assumptions ,and calculations are made.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{2.png}
     \caption{Transformer equivalent circuit}
 \end{figure} 
-%
+From the measurement feature of the oscilloscope, \(V_{sc-RMS}\) ,and \(I_{sc-RMS}\) are found 0.3345 Volts and 0.0230 Amps respectively. So the impedance becomes;
+\[
+    Z = \frac{V_{sc-RMS}}{I_{sc-RMS}} = 15 \Omega
+    \]
+The primary side of the resistance and inductance are taken equal to the reflected equivalent secondary side resistance and inductance. The \(\theta\) , phase difference is found as 23.9326 degrees. The resistance becomes;
+\[
+    R = Z cos (\theta) = 13.7103
+    \]
+    The reactance becomes;
+    \[
+    X = Z sin (\theta) = 6.0849 
+    \]
+So as a result the following parameters are obtained by equating the overall resistance to R and overall reactance to X. From Step 1 n is taken as 8.
+\begin{table}[H]
+    \begin{center}
+        \caption{Transformer equivalent circuit parameters}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c | c ||} 
+            \hline
+            \(r_1 (\Omega) \) & \(r_2 (\Omega)\)  & \(L_1\) (H) & \(L_2\) (H) \\ [0.5ex] 
+            \hline\hline
+            6.8553 & 0.1071 & 3.0425 & 0.0475 \\ 
+            \hline
+        \end{tabular}
+    \end{center}
+    \end{table}
+    
+
+    %
 \subsection{Step 4}
 \begin{figure}[H]
     \centering
