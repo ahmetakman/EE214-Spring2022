@@ -46,8 +46,15 @@ The results of the experiment are discussed in the following steps.
 %
 \subsection{Step 1}
 
+In this step transformer circuit with no resistive load is examined.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{1.png}
+    \caption{Circuit schematic for the step 1}
+\end{figure} 
 
-In the first step, the following circuit given in Figure X is set, and it is observed that the step-down operation of the transformer under no load with sinusoidal input voltage has a peak to peak voltage of 20 V and frequency of 50 Hz. Then, \(V_{in}(t) \) and \(V_{out}(t)\) are plotted on the graph in Figure X.
+
+In the first step, the following circuit given in Figure 1 is set, and it is observed that the step-down operation of the transformer under no load with sinusoidal input voltage has a peak to peak voltage of 20 V and frequency of 50 Hz. Then, \(V_{in}(t) \) and \(V_{out}(t)\) are plotted on the graph in Figure 2.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1\textwidth]{1_1.png}
@@ -67,16 +74,16 @@ In this step transformer circuit with a resistive load is examined.
 \end{figure} 
 
 
-For this step, the signal generator output is adjusted as \(V_s = 10sin(2\pi50t)\) with 20V peak to peak voltage and 50Hz frequency; then, the Transformer circuit with resistive load is constructed as given in Figure X, where R = \(56\Omega \).  
+For this step, the signal generator output is adjusted as \(V_s = 10sin(2\pi50t)\) with 20V peak to peak voltage and 50Hz frequency; then, the Transformer circuit with resistive load is constructed as given in Figure 3, where R = \(56\Omega \).  
 \subsubsection{i}
-In this step, to obtain current \(I_{in}\), \(1K\Omega \) resistor is connected between the - terminal of the primary side transformer and the - terminal of the signal generator. Then, CH1 is connected to the + terminal of the signal generator, and the CH2 probe is to the - terminal of the primary side transformer. By subtracting CH2 from CH1 \(V_{in}\) is obtained, and the CH2 probe of DSO gives \(I_{in}\) in mA. Afterwards, \(V_{in}\) and \(I_{in}\) are plotted in Figure X. Then, \(V_{rms}\) and \(I_{rms}\) are obtained using the DSO measurement tool as 3.5V and 3.7mA, respectively, given in Figure X.
+In this step, to obtain current \(I_{in}\), \(1K\Omega \) resistor is connected between the - terminal of the primary side transformer and the - terminal of the signal generator. Then, CH1 is connected to the + terminal of the signal generator, and the CH2 probe is to the - terminal of the primary side transformer. By subtracting CH2 from CH1 \(V_{in}\) is obtained, and the CH2 probe of DSO gives \(I_{in}\) in mA. Afterwards, \(V_{in}\) and \(I_{in}\) are plotted in Figure 4. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1\textwidth]{2_1.png}
     \caption{\(V_in(t) \) and \(I_in(t)\) vs Time}
 \end{figure} 
-
+Then, \(V_{rms}\) and \(I_{rms}\) are obtained using the DSO measurement tool as 3.5V and 3.7mA, respectively, given in Table 1.
 \begin{table}[H]
     \begin{center}
         \caption{RMS Values of input \(V_{rms}\) and input \(I_{rms}\)}
@@ -92,7 +99,7 @@ In this step, to obtain current \(I_{in}\), \(1K\Omega \) resistor is connected 
 \end{table}
 
 \subsubsection{ii}
-For this step, CH1 is connected to the + terminal of the secondary side of the transformer, and from that, probe \(V_{out}(t)\) is obtained and plotted as in Figure X. Then, the RMS value of \(V_{out}\) is measured with DSO as 555mV.
+For this step, CH1 is connected to the + terminal of the secondary side of the transformer, and from that, probe \(V_{out}(t)\) is obtained and plotted as in Figure 5. Then, the RMS value of \(V_{out}\) is measured with DSO as 555mV.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1\textwidth]{2_2.png}
@@ -100,7 +107,7 @@ For this step, CH1 is connected to the + terminal of the secondary side of the t
 \end{figure} 
 
 \subsubsection{iii}
-In this step, input frequency is increased to 500 Hz, and i. and ii. are repeated. The plots given in Figures X and X are obtained.
+In this step, input frequency is increased to 500 Hz, and i. and ii. are repeated. The plots given in Figures 6 and 5 are obtained.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1\textwidth]{2_3_1.png}
@@ -121,7 +128,7 @@ In this step transformer equivalent circuit is formulated by making the secondar
 
 
 %
-By connecting a 1K\(\Omega\) resistor series to the primary terminal, we have obtained the plot given in Figure X, which shows \(V_in(t) \) and \(I_in(t)\) on the same graph.  
+By connecting a 1K\(\Omega\) resistor series to the primary terminal, we have obtained the plot given in Figure 8, which shows \(V_in(t) \) and \(I_in(t)\) on the same graph.  
 \begin{figure}[H]
     \centering
     \includegraphics[width = 1\textwidth]{3_1.png}
@@ -129,10 +136,10 @@ By connecting a 1K\(\Omega\) resistor series to the primary terminal, we have ob
 \end{figure} 
 
 \subsubsection{ii}
-A Bunch of assumptions and calculations is made to obtain the equivalent circuit parameters given in Figure X.
+A bunch of assumptions and calculations is made to obtain the equivalent circuit parameters given in Figure 9.
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{2.png}
+    \includegraphics[width = 0.75\textwidth]{3.png}
     \caption{Transformer equivalent circuit}
 \end{figure} 
 From the measurement feature of the oscilloscope, \(V_{sc-RMS}\) and \(I_{sc-RMS}\) are found to be 0.3345 Volts and 0.0230 Amps, respectively. So the impedance becomes;
@@ -147,7 +154,7 @@ From the measurement feature of the oscilloscope, \(V_{sc-RMS}\) and \(I_{sc-RMS
     \[
     X = Z sin (\theta) = 6.0849 
     \]
-    So, as a result, the following parameters are obtained by equating the overall resistance to R and overall reactance to X. From Step 1, n is taken as 8.
+    So, as a result, the parameters given in Table 2 are obtained by equating the overall resistance to R and overall reactance to X. From Step 1, n is taken as 8.
     \begin{table}[H]
     \begin{center}
         \caption{Transformer equivalent circuit parameters}
@@ -165,10 +172,10 @@ From the measurement feature of the oscilloscope, \(V_{sc-RMS}\) and \(I_{sc-RMS
 
     %
 \subsection{Step 4}
-In this step impedance matching transformer circuit is constructed as it is in Figure X with the input \(V_{in}(t) = 10sin(2\pi50t)\) and same \(N_1:N_2\) rate. 
+In this step impedance matching transformer circuit is constructed as it is in Figure 10 with the input \(V_{in}(t) = 10sin(2\pi50t)\) and same \(N_1:N_2\) rate. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{3.png}
+    \includegraphics[width = 0.75\textwidth]{4.png}
     \caption{Impedance matching}
 \end{figure} 
 
