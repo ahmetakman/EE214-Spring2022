@@ -31,7 +31,7 @@
 \begin{document}
 \thispagestyle{empty}
 
-\title{Spring 2022 EE214 Experiment 3  \protect\\ Miscellaneous Op-Amp Circuits}
+\title{Spring 2022 EE214 Experiment 3  \protect\\ Transformers and MATLAB Workshop }
 \author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 \protect\\ Assistant: Onur Selim Kılıç}
 \date{\today}
 \maketitle
@@ -40,11 +40,12 @@
 %abstract
 %\end{abstract}
 \section{Introduction}
-
+In this experiment, transformers and MATLAB workshop, we are required to get used to plotting with MATLAB and expermented with different transformer setups. First, we are expected to observe the step-down property of the transformer. Then, the behaviour of the tranformer with a resistive load is expected to be experimented with different frequencies. The transformers characteristics are needed to be formulated with an equivalent circuit. Lastly, advantage of the impedance matching circuit setup is requested to be observed.
 \section{Experimental Results and Discussion}
 The results of the experiment are discussed in the following steps.
 %
 \subsection{Step 1}
+
 
 In first step, following circuit given in Figure X is set and it is observed that step-down operation of the tansformer under no load with sinusoidal input voltage which has a peak to peak voltage of 20 V and frequency of 50 Hz. Then, \(V_{in}(t) \) and \(V_{out}(t)\) are plotted on the graph in Figure X.
 
@@ -52,6 +53,33 @@ Afterwards, \(N_1:N_2\) ratio is measured as \(\frac{19.5}{2.5}\approx 7.8 \).
 
 %
 \subsection{Step 2}
+
+In this step transformer circuit with no resistive load is examined. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{1.png}
+    \caption{Circuit schematic for the step 1}
+\end{figure} 
+    
+In first step, following circuit given in Figure X is set and it is observed that step-down operation of the tansformer under no load with sinusoidal input voltage which has a peak to peak voltage of 20 V and frequency of
+50 Hz. Then, \(V_in(t) \) and \(V_out(t)\) are plotted on the graph in Figure X.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{1_1.png}
+    \caption{\(V_in(t) \) and \(V_out(t)\) vs Time}
+\end{figure} 
+Afterwards, \(N_1:N_2\) ratio is measured as \(19.5/2.5 \approx 7.8 \).
+
+%
+\subsection{Step 2}
+In this step transformer circuit with a resistive load is examined.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2.png}
+    \caption{Circuit schematic for the step 2}
+\end{figure} 
+
+
 For this step, signal generator output is adjusted as \(V_s = 10sin(2\pi50t)\) with 20V peak to peak voltage and 50Hz frequency ;then, Transformer circuit with resistive load is constructed as given in the Figure X where R = \(56\Omega \).  
 \subsubsection{i}
 In this step, to obtain current \(I_{in}\), \(1K\Omega \) resistor is connected between - terminal of primary side transformer and - terminal of signal generator. Then, CH1 is connected to + terminal of the signal generator and CH2 probe is to the - terminal of primary side transformer. By subtracting CH2 from CH1 \(V_{in}\) is obtained, and CH2 probe of DSO gives \(I_{in}\) in mA. Afterwards, \(V_{in}\) and \(I_{in}\) are plotted in Figure X. Then, \(V_{rms}\) and \(I_{rms}\) are obtained using DSO measurement tool as 3.5V and 3.7mA respectively given in figure X. 
@@ -75,11 +103,56 @@ For this step CH1 is connected to + terminal of secondary side of the transforme
 In this step, input frequency is increased to 500 Hz and i. and ii. are repeated. In previous steps (i. and ii.) phase difference between voltage and current was measured as \(-40\deg \) and when frequency is increased to 500 Hz phase difference is obtained as \(-25\deg\). Therefore, it is clearly seen that as frequency increase phase difference between voltage and current decreases. But after some point, although the frequency continues to increase, rate of change in phase difference decreases less and less.
 %
 \subsection{Step 3}
-
+In this step transformer equivalent circuit is formulated by making the secondary terminal of the transformer short circuited.
 \subsubsection{i}
+
 \subsubsection{ii}
 
 %
+=======
+By connecting a 1\(\Omega\) resistor series to the primary terminal we have obtained the plot given in Figure X which shows \(V_in(t) \) and \(I_in(t)\) on the same graph.  
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{3_1.png}
+    \caption{\(V_in(t) \) and \(I_in(t)\) vs Time }
+\end{figure} 
+
+\subsubsection{ii}
+To obtain the equivalent circuit parameters given in Figure X. Bunch of assumptions ,and calculations are made.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2.png}
+    \caption{Transformer equivalent circuit}
+\end{figure} 
+From the measurement feature of the oscilloscope, \(V_{sc-RMS}\) ,and \(I_{sc-RMS}\) are found 0.3345 Volts and 0.0230 Amps respectively. So the impedance becomes;
+\[
+    Z = \frac{V_{sc-RMS}}{I_{sc-RMS}} = 15 \Omega
+    \]
+The primary side of the resistance and inductance are taken equal to the reflected equivalent secondary side resistance and inductance. The \(\theta\) , phase difference is found as 23.9326 degrees. The resistance becomes;
+\[
+    R = Z cos (\theta) = 13.7103
+    \]
+    The reactance becomes;
+    \[
+    X = Z sin (\theta) = 6.0849 
+    \]
+So as a result the following parameters are obtained by equating the overall resistance to R and overall reactance to X. From Step 1 n is taken as 8.
+\begin{table}[H]
+    \begin{center}
+        \caption{Transformer equivalent circuit parameters}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c | c ||} 
+            \hline
+            \(r_1 (\Omega) \) & \(r_2 (\Omega)\)  & \(L_1\) (H) & \(L_2\) (H) \\ [0.5ex] 
+            \hline\hline
+            6.8553 & 0.1071 & 3.0425 & 0.0475 \\ 
+            \hline
+        \end{tabular}
+    \end{center}
+    \end{table}
+    
+
+    %
 \subsection{Step 4}
 In this step impedance matching transformer circuit is constructed as if in Figure X with the input \(V_{in}(t) = 10sin(2\pi50t)\) and same \(N_1:N_2\) rate. 
 
@@ -93,7 +166,7 @@ For this step, 1K\(\Omega \) and 10\(\Omega \) resistors are connected series wi
  From these results, it is seen that in second case power transmitted to 10\(\Omega \) from the same input is significantly smaller than the first. Therefore, we can conclude that transformers can be used for delivering the power efficiently. 
 
 \section{Conclusion}
-
+In this experiment, transformers and MATLAB workshop, we got used to plotting with MATLAB and expermented with different transformer setups. First, we have observed the step-down property of the transformer. Then, the behaviour of the tranformer with a resistive load is experimented with different frequencies. The transformers characteristics are formulated with an equivalent circuit. Lastly, advantage of the impedance matching circuit setup is observed.
 \section*{Appendix A}
 \begin{itemize}
     \item PreLab Preparation 4 hours
