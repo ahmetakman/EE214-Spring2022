@@ -48,11 +48,13 @@ The results of the experiment are discussed in the following steps.
 \subsection{Step 1}
 
 In this part, circuit in figure 1 is set with \(R_{line}= 100\Omega\) and \(Z_{load}= 560\Omega + j0.1w\) and inductor \(L= 0.1H\).
+
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{1SCH.png}
     \caption{Circuit schematic for the step 1}
 \end{figure} 
+
 For the parts below (a-b-c), magnitude of the voltage source is adjusted such that \(V_{load}(t)\) always equals to \(5sin(2000\pi t)\) V. 
 
 \subsubsection{a.}
@@ -65,7 +67,7 @@ In this part, the 100nF capacitor is connected parallel with the load, and the s
 \subsubsection{c.}
 For this part, the one \(\mu F\) capacitor is replaced with the 100nF capacitor in part a., and the same calculations and necessary measurements are made for this part as well.
 \subsubsection{d.}
-
+All the results of the measurements are given in this section as tabulated in Table 1 , 2 and 3.
 \begin{table}[H]
     \begin{center}
         \caption{Power Measurements}
@@ -74,11 +76,11 @@ For this part, the one \(\mu F\) capacitor is replaced with the 100nF capacitor 
             \hline
             Part & \(V_{in}\)\newline (Vrms) & \(V_{line}\)\newline (Vrms) & \(V_{Load}\) \newline (Vrms) &\(i_{Load}\)\newline (mArms) & \(\phi_{Load}\)\newline(degree) &\(\phi_{in}\)\newline(degree)  \\ [0.5ex] 
             \hline\hline
-            a. & &  & & & &   \\ 
+            a. & 3.7 & 0.4   & 3.4 & 4& 65 &   \\ 
             \hline
-            b. & &  & & & &    \\
+            b. &3.7 &0.3  &3.41 &  3 & 40&    \\
             \hline
-            c. & &  & & & &   \\ [1ex] 
+            c. &4 &1.6  &3.4 &16 &-74 &   \\ [1ex] 
             \hline
         \end{tabular}
 \end{center}
@@ -125,7 +127,7 @@ In this step, the circuit in figure 2 is set by adjusting signal generator outpu
 
 \[\frac{V_{rms}}{i_{rms}} = |Z| = \frac{(-j)^2}{w^2C^2}\]
 where Z is the impedance and w = \(2\pi (500 Hz)\).  
-\[C1 = \frac{i_{rms}}{V_{rms}w}  =  \frac{3.79 mA}{1.23 V . 1000\pi} \approx 0.98x10^{-6} = 0.98 \mu F\]
+\[C1 = \frac{i_{rms}}{V_{rms}\omega}  =  \frac{3.79 mA}{1.23 V . 1000\pi} \approx 0.98x10^{-6} = 0.98 \mu F\]
 
 Then by adjusting LC meter to proper scale, nominal capacitance of the capacitor is measured as 1.03 \(\mu F\)
 \begin{figure}[H]
@@ -136,13 +138,7 @@ Then by adjusting LC meter to proper scale, nominal capacitance of the capacitor
     
 \subsection{Step 3}
 
-In this step, the circuit in figure 4 is set with 1.5 kHz and 3 kHz frequency sine wave, respectively, and 0.1 \(\mu F\) capacitor and 1k\(\Omega \) resistor and 0.1 H inductor are used, then by using two different methods, impedance Z in figure 3 is measured. 
-
-\subsubsection{First Method}
-
-
-\subsubsection{Second Method}
-
+In this step, the circuit in figure 4 is set with 1.5 kHz and 3 kHz frequency sine wave, respectively, and 0.1 \(\mu F\) capacitor and 1k\(\Omega \) resistor and 0.1 H inductor are used, then by using two different methods, impedance Z in Figure 3 is measured. To be able to measure , A and B terminals of the load is connected to the A and B terminals of the circuit given in Figure 4.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{3SCH.png}
@@ -154,6 +150,40 @@ In this step, the circuit in figure 4 is set with 1.5 kHz and 3 kHz frequency si
     \includegraphics[width = 0.75\textwidth]{3_1SCH.png}
     \caption{Outside circuit schematic for the step 3}
 \end{figure} 
+
+\subsubsection{First Method}
+In the first method, the probes of the oscilloscope is connected to the A, B and C terminals as follows. Terminal A is connected to the CH1, and Terminal C is connected to the CH2. Terminal B is connected to the common ground. Then the adjustment is made that CH2 is inverted in the oscilloscope. So, the CH2 corresponds to the current flowing through the circuit. \\ By ignoring the resistance of the 10 Ohm resistor, the phase angle is measured in XY mode. 
+
+\subsubsection{Second Method}
+In the second method, setup described in the first method is conserved but instead of XY mode the time mode of the DSO is used. Here, simply the measure feature of the DSO is used and the same results are obtained. The results of the measurements made in Step 3 is given in Table 4, and Table 5.
+
+\begin{table}[H]
+    \begin{center}
+        \caption{Power Measurements in Step 3 (1.5kHz)}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c | c ||} 
+            \hline
+            CH1 (Voltage) & CH2 (mAmps) & Phase Angle (degrees) & Impedance (Ohms)   \\ [0.5ex] 
+            \hline\hline
+            4 & 5  & 40    & 800  \\ 
+            \hline
+        \end{tabular}
+\end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \caption{Power Measurements in Step 3 (3kHz)}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c | c ||} 
+            \hline
+            CH1 (Voltage) & CH2 (mAmps) & Phase Angle (degrees) & Impedance (Ohms)   \\ [0.5ex] 
+            \hline\hline
+            4.2 & 2.7  & 80    & 1555   \\ 
+            \hline
+        \end{tabular}
+\end{center}
+\end{table}
 
 \section{Conclusion}
 In this experiment, RMS values of voltages and currents are measured. Phase differences between current and voltage are calculated, and complex power and power factor are measured beside the apparent power S, the real power, and the reactive power with the efficiency of the system. Capacitance is calculated using voltage and current RMS values. Lastly, two different modes of DSO are used and explained to calculate impedance Z for two different frequencies.
