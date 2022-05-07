@@ -1,0 +1,87 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{tabularx} % extra features for tabular environment
+\usepackage{amsmath}  % improve math presentation
+\usepackage{float}
+\usepackage{pdfpages}
+
+
+\usepackage{graphicx} % takes care of graphic including machinery
+\graphicspath{ {./figures/} }
+%\usepackage[margin=1in,letterpaper]{geometry} % decreases margins
+%\usepackage{cite} % takes care of citations
+\usepackage[final]{hyperref} % adds hyper links inside the generated pdf file
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=blue,        % color of internal links
+	citecolor=blue,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor =blue         
+}
+\usepackage[margin = 1in,headsep=0.5cm,headheight=2cm,letterpaper]{geometry} 
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Student 1 : Ahmet Akman 2442366 \\ Student 2: Yusuf Toprak Yıldıran 2444149 \\ Assistant: Onur Selim Kılıç}
+\rhead{Date: \today \\ Group: Wednesday Morning - 5} 
+%\cfoot{center of the footer!}
+\renewcommand{\headrulewidth}{0.1pt}
+
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\title{Spring 2022 EE214 Project Work  \protect\\ PreliminaryWork }
+\author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 \protect\\ Assistant: Onur Selim Kılıç}
+\date{\today}
+\maketitle
+\tableofcontents
+%\begin{abstract}
+%abstract
+%\end{abstract}
+\section{Introduction}
+In this experiment, transformers and MATLAB workshop, we are required to get used to plotting with MATLAB and experimented with different transformer setups. First, we are expected to observe the step-down property of the transformer. Then, the behavior of the transformer with a resistive load is expected to have experimented with different frequencies. The transformer's characteristics are needed to be formulated with an equivalent circuit. Lastly, the advantage of the impedance matching circuit setup is requested to be observed.
+\section{Experimental Results and Discussion}
+The results of the experiment are discussed in the following steps.
+%
+\subsection{Step 1}
+
+\section{Conclusion}
+\section*{Appendix A}
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE TABLE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\begin{center}
+    \caption{Resistance reading by color code convention.}
+    \vspace{2mm}
+    \begin{tabular}{||c | c | c||} 
+        \hline
+        Color Order & Value & Tolerance \\ [0.5ex] 
+        \hline\hline
+        Brown / Black / Red / Gold & 1k\( \Omega \) & \( \% \) 5  \\ 
+        \hline
+        Yellow / Violet / Red / Gold & 4.7k\( \Omega \) & \( \% \) 5   \\
+        \hline
+        Brown / Grey / Orange / Gold & 18k\( \Omega \) & \( \% \) 5  \\ [1ex] 
+        \hline
+    \end{tabular}
+\end{center}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.75\textwidth]{5.png}
+\caption{Circuit schematic for the step 5}
+\end{figure} 
+
+%%%%%%%%%%%%%%%%%%%%%%   EXAMPLE IMAGE FROM PDF   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H] \centering{
+	\includegraphics[scale=0.25]{2a_plot.pdf}}
+	\caption{Experiment 2}
+\end{figure}
+%%%%%%%%%%%%%%%% Deneme Push
