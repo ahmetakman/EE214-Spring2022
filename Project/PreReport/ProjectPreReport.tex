@@ -33,21 +33,21 @@
 
 \title{Spring 2022 EE214 Project Work  \protect\\ PreliminaryWork }
 \author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 }
-\date{\today}
+%\date{\today}
 \maketitle
-\tableofcontents
+%\tableofcontents
 %\begin{abstract}
 %abstract
 %\end{abstract}
 \section{Introduction}
-\section{Experimental Results and Discussion}
-The results of the experiment are discussed in the following steps.
-%
+\vspace{-4mm}
+In this document, the Preliminary report of the term project of the EE214 course will be presented. The transmitter unit, receiver unit and the speaker unit studies for the preliminary design phase will be explained respectively.
+\vspace{-4mm}
 \subsection{Transmitter Unit}
 In this section, a transmitter unit should be designed which produces sine waves with 12 different frequency tones and collect them into one wave. For project requirements to be satisfied sinusoidal waves with 1 kHz, 2 kHz, 3 kHz, 5kHz, 6 kHz, 7 kHz, 9 kHz, 10 kHz, 11 kHz, 13 kHz, 14 kHz and 15 kHz frequencies will be produced and collected into one signal which will be transmitted to receiver unit through the wire. Frequencies that 4 kHz and its multiples are not going to be produced and magnitudes of produced signals must be large enough to receiver unit be able to distinguish it from the noise.
 
 Therefore, a sine wave generator circuit must be designed which can be produce all the signals above. For this purpose, Wien Bridge Oscillator circuit is a suitable choice. Wien Bridge Oscillator is a is a type of electronic oscillator that generates sine waves that can have a large range of frequencies.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.35\textwidth]{WIENBRDGE.png}
     \caption{Wien Bridge Oscillator}
@@ -89,7 +89,7 @@ From above calculations, it can be calculated that when \(16kHz\) frequency is w
 \end{table}  
 
 After generating necessary signals, one should sum this signals into one by using summing amplifier circuit given in Figure X. 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.35\textwidth]{Non-Inv-Sum-Amp.jpg}
     \caption{Non-inverting summing amplifier}
@@ -113,42 +113,44 @@ H(s) = \frac{H_0 (\omega_0)^2}{s^2 + \frac{\omega_0}{Q} s  + (\omega_0)^2}
 \]
 
 Now let us examine briefly transfer responses in the literature to choose an optimum design path.
+\vspace{-4mm}
 \subsubsection{Butterworth}
 Butterworth transfer response offers clean pass and not-pass regions in other words no ripple. However, the band that allows the signals is not narrow.
+\vspace{-4mm}
 \subsubsection{Chebyshev}
 Chebyshev transfer response offers narrower band however it has ripples in the pass band.
 \subsubsection{Bessel}
 Bessel filter is optimized to obtain better transient response due to a linear phase (i.e.
 constant delay) in the passband.
 
-\vspace{4mm}
+\vspace{2mm}
 For our case as long as it is tuned carefully all three transfer responses can be used. However in order to have  better frequency discrimination Chebyshev function is selected to be used in this phase of the project. The values for the Chebyshev function will be fetched from the design tables available in internet. (The table is not included here in order not to excess page limit.)
 
-\vspace{4mm}
+\vspace{2mm}
 Now let us examine briefly the available design topologies to choose which design path to go for. There are three main topologies for the  band-pass filter design.
-
+\vspace{-4mm}
 \subsubsection{Multiple Feedback Band Pass}
 Multiple feedback band-pass filter designs are widely used (over sallen-key filter) however does not offer much tunability. (\href{https://www.analog.com/media/en/training-seminars/tutorials/mt-220.pdf}{Source})
-
+\vspace{-4mm}
 \subsubsection{State Variable Filter}
 
 This configuration offers the most precise implementation
 of the filter function, at the expense of many more circuit
 elements. All three major parameters (gain, Q, and \(\omega_0\)) can be adjusted independently, and low-pass, high-pass, and band-pass outputs are available simultaneously. Note that the low-pass and high-pass outputs are inverted in phase while the band-pass output maintains the phase. (\href{https://www.analog.com/media/en/training-seminars/tutorials/MT-223.pdf}{Source})
-
+\vspace{-4mm}
 \subsubsection{Dual Amplifier Band Pass}
 
 The dual amplifier band-pass filter structure is useful in designs requiring high Qs and high frequencies. Its component sensitivity is small, and the element spread is low. A useful feature of this circuit is that the Q and resonant frequency can be adjusted more or less independently. (\href{https://www.analog.com/media/en/training-seminars/tutorials/MT-209.pdf}{Source})
 
 \vspace{2mm}
 So, it can be said that both state variable filter and dual amplifier band pass filter is quite suitable for our purposes. In this stage of the project dual amplifier band pass filter topology is selected in order to have less components. Now let us examine general outlook of the topology.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.5\textwidth]{dualbandpass.png}
     \caption{Dual Band-Pass Topology}
 \end{figure} 
 In Figure X the in and out charactherictics also provided. In order to be able to adjust all the range of the needed frequencies, the target frequency for the base design is selected as 7kHz. With the adjustment of safety factor of 1.5 seperation is targeted as 15dB. The resulting (targeted) curve is obtained as given in Figure X.
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.75\textwidth]{response.png}
     \caption{Targeted base frequency response}
@@ -163,8 +165,7 @@ To conclude the receiver unit, the trade-offs for first design steps are created
 \subsection{Speaker Unit}
 
 \section{Conclusion}
-\section*{Appendix A}
-
+In this document, the Preliminary report of the term project of the EE214 course is presented. The transmitter unit, receiver unit and the speaker unit studies for the preliminary design phase are explained respectively in the constrains of the preliminary report.
 
 \end{document}
 
