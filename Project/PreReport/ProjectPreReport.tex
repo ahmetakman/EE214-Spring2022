@@ -52,15 +52,15 @@ Therefore, a sine wave generator circuit must be designed which can be produce a
     \includegraphics[width = 0.35\textwidth]{WIENBRDGE.png}
     \caption{Wien Bridge Oscillator}
 \end{figure} 
-Wien Bridge Oscillator circuit schematic is given in Figure X. When C1 equal C2, and R3 equals R4, frequency of the signal that is produced by this circuit is calculated using the following formula:
+Wien Bridge Oscillator circuit schematic is given in Figure 1. When C1 equal C2, and R3 equals R4, frequency of the signal that is produced by this circuit is calculated using the following formula:
 \[f = \frac{1}{2\pi \sqrt[]{C_1R_3C_2R_4}}\]
 Let \(C_1\), \(C_2\) be C ,and \(R_3\), \(R_4\) be R then frequency is:
 \[f = \frac{1}{2\pi RC}\]
 Hence, if C is set to be \(1\mu F\), R should be calculated to obtain the correct frequency. 
 
-Gain of this circuit is \(\frac{R_1}{R_2}\). If the gain is inadequate oscillation would be weak,but if the gain is too much, circuit might goes into saturation. In order oscillation to be well, gain should be approximately 2-3. Therefore, \(R_1 = 68k\Omega\) and \(R_2 = 33k\Omega\) would be proper choice.
+Gain of this circuit is \(\frac{R_1}{R_2}\). If the gain is inadequate,oscillation would be weak,but if the gain is too much, circuit might goes into saturation. In order oscillation to be well, gain should be approximately 2-3. Therefore, \(R_1 = 68k\Omega\) and \(R_2 = 33k\Omega\) and \(V_S = 9V\),\(-V_S = -9V\) would be proper choice.
 
-From above calculations, it can be calculated that when \(16kHz\) frequency is wanted to be obtain, 1k\(\Omega \) resistors should be used for R value. By doing same calculations following table can be obtained.
+From above calculations, it can be calculated that when \(16kHz\) frequency is wanted to be obtain, 1k\(\Omega \) resistors should be used for R value. By doing same calculations following Table 1 and Table 2 can be obtained.
 \begin{table}[H]
     \begin{center}
         \caption{Required Resistances Corresponding Frequencies 1}
@@ -69,7 +69,7 @@ From above calculations, it can be calculated that when \(16kHz\) frequency is w
             \hline
             Frequencies &\(1kHz\) & \(2kHz\) & \(3kHz\)& \(5kHz\)& \(6kHz\)& \(7kHz\)\\ [0.5ex] 
             \hline\hline
-            Resistances &15915\(k\Omega\) & 7957\(k\Omega\) & 5305\(k\Omega\)& 3183\(k\Omega\)& 2652\(k\Omega\)& 2273\(k\Omega\)\\
+            Resistances &15915\(\Omega\) & 7957\(\Omega\) & 5305\(\Omega\)& 3183\(\Omega\)& 2652\(\Omega\)& 2273\(\Omega\)\\
             \hline
         \end{tabular}
     \end{center}
@@ -82,14 +82,15 @@ From above calculations, it can be calculated that when \(16kHz\) frequency is w
             \hline
             Frequencies &\(9kHz\)& \(10kHz\)& \(11kHz\)& \(13kHz\)& \(14kHz\)& \(15kHz\)\\ [0.5ex] 
             \hline\hline
-            Resistances &1768\(k\Omega\)& 1591\(k\Omega\)& 1446\(k\Omega\)& 1224\(k\Omega\)& 1136\(k\Omega\)& 1061\(k\Omega\)\\
+            Resistances &1768\(\Omega\)& 1591\(\Omega\)& 1446\(\Omega\)& 1224\(\Omega\)& 1136\(\Omega\)& 1061\(\Omega\)\\
             \hline
         \end{tabular}
     \end{center}
 \end{table}  
 
-After generating necessary signals, one should sum this signals into one by using summing amplifier circuit given in Figure X. 
-\begin{figure}[h]
+
+After generating necessary signals, one should sum this signals into one by using summing amplifier circuit given in Figure 2. 
+\begin{figure}[H]
     \centering
     \includegraphics[width = 0.35\textwidth]{Non-Inv-Sum-Amp.jpg}
     \caption{Non-inverting summing amplifier}
@@ -163,6 +164,13 @@ To conclude the receiver unit, the trade-offs for first design steps are created
     \item Real life tests will be conducted and the circuit parameters will be tuned further.
 \end{itemize}
 \subsection{Speaker Unit}
+For this section, there need a speaker unit to play the selected tone ,but since our circuit will have high output resistance compared to speaker's resistance(generally 32Ω) the signal received by speaker would be quite weak. Hence, one should design an amplifier that will not go into saturation to be able to drive the speaker properly. Hence, a non-inverting amplifier circuit given in Figure 6 would be a great choice for it. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.35\textwidth]{Non-Inverting_Amplifier.svg.png}
+    \caption{Non inverting amplifier}
+\end{figure} 
+Gain of this circuit is \(1 + \frac{R_2}{R_1}\). Therefore, if output resistance is assumed to be 10k\(\Omega\) and the speaker is 50\(\Omega\) there need a gain around 200 ,and \(R_1\),\(R_2\) should be chosen properly, and one need to adjust the DC voltage supply that \(V_{out}\) is not going to exceed it so that op-amp stays in the linear region and gives correct output that we want. 
 
 \section{Conclusion}
 In this document, the Preliminary report of the term project of the EE214 course is presented. The transmitter unit, receiver unit and the speaker unit studies for the preliminary design phase are explained respectively in the constrains of the preliminary report.
