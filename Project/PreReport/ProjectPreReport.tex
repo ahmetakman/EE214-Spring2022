@@ -44,6 +44,56 @@
 The results of the experiment are discussed in the following steps.
 %
 \subsection{Transmitter Unit}
+In this section, a transmitter unit should be designed which produces sine waves with 12 different frequency tones and collect them into one wave. For project requirements to be satisfied sinusoidal waves with 1 kHz, 2 kHz, 3 kHz, 5kHz, 6 kHz, 7 kHz, 9 kHz, 10 kHz, 11 kHz, 13 kHz, 14 kHz and 15 kHz frequencies will be produced and collected into one signal which will be transmitted to receiver unit through the wire. Frequencies that 4 kHz and its multiples are not going to be produced and magnitudes of produced signals must be large enough to receiver unit be able to distinguish it from the noise.
+
+Therefore, a sine wave generator circuit must be designed which can be produce all the signals above. For this purpose, Wien Bridge Oscillator circuit is a suitable choice. Wien Bridge Oscillator is a is a type of electronic oscillator that generates sine waves that can have a large range of frequencies.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{bandpass.png}
+    \caption{Filter Responses (ideal)}
+\end{figure} 
+Wien Bridge Oscillator circuit schematic is given in Figure X. When C1 equal C2, and R3 equals R4, frequency of the signal that is produced by this circuit is calculated using the following formula:
+\[f = \frac{1}{2\pi \sqrt[]{C_1R_3C_2R_4}}\]
+Let \(C_1\), \(C_2\) be C ,and \(R_3\), \(R_4\) be R then frequency is:
+\[f = \frac{1}{2\pi RC}\]
+Hence, if C is set to be \(1\mu F\), R should be calculated to obtain the correct frequency. 
+
+Gain of this circuit is \(\frac{R_1}{R_2}\). If the gain is inadequate oscillation would be weak,but if the gain is too much, circuit might goes into saturation. In order oscillation to be well, gain should be approximately 2-3. Therefore, \(R_1 = 68k\Omega\) and \(R_2 = 33k\Omega\) would be proper choice.
+
+From above calculations, it can be calculated that when \(16kHz\) frequency is wanted to be obtain, 1k\(\Omega \) resistors should be used for R value. By doing same calculations following table can be obtained.
+\begin{table}[H]
+    \begin{center}
+        \caption{Required Resistances Corresponding Frequencies 1}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c | c| c| c| c| c| c| c| c| c| c||} 
+            \hline
+            Frequencies &\(1kHz\) & \(2kHz\) & \(3kHz\)& \(5kHz\)& \(6kHz\)& \(7kHz\)\\ [0.5ex] 
+            \hline\hline
+            Resistances &15915\(k\Omega\) & 7957\(k\Omega\) & 5305\(k\Omega\)& 3183\(k\Omega\)& 2652\(k\Omega\)& 2273\(k\Omega\)\\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}  
+\begin{table}[H]
+    \begin{center}
+        \caption{Required Resistances Corresponding Frequencies 2}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c | c| c| c| c| c| c| c| c| c| c||} 
+            \hline
+            Frequencies &\(9kHz\)& \(10kHz\)& \(11kHz\)& \(13kHz\)& \(14kHz\)& \(15kHz\)\\ [0.5ex] 
+            \hline\hline
+            Resistances &1768\(k\Omega\)& 1591\(k\Omega\)& 1446\(k\Omega\)& 1224\(k\Omega\)& 1136\(k\Omega\)& 1061\(k\Omega\)\\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}  
+
+After generating necessary signals, one should sum this signals into one by using summing amplifier circuit given in Figure X. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{bandpass.png}
+    \caption{Filter Responses (ideal)}
+\end{figure} 
 \subsection{Receiver Unit}
 In this part a receiver needed to be designed. So, let us first define the design requirements.
 \begin{itemize}
