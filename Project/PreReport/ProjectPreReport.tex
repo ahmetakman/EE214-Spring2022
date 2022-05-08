@@ -31,36 +31,37 @@
 \begin{document}
 \thispagestyle{empty}
 
-\title{Spring 2022 EE214 Project Work  \protect\\ PreliminaryWork }
-\author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 }
-%\date{\today}
+\title{ \vspace{-2cm} Spring 2022 EE214 Project Work  \protect\\ Preliminary Report\vspace{-4mm}}
+\author{ Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 }
+\date{}
 \maketitle
 %\tableofcontents
 %\begin{abstract}
 %abstract
 %\end{abstract}
+\vspace{-1.5cm}
 \section{Introduction}
 \vspace{-4mm}
-In this document, the Preliminary report of the term project of the EE214 course will be presented. The transmitter unit, receiver unit and the speaker unit studies for the preliminary design phase will be explained respectively.
+In this document, the Preliminary report of the term project of the EE214 course will be presented. The transmitter unit, receiver unit, and speaker unit studies for the preliminary design phase will be explained, respectively.
 \vspace{-4mm}
 \subsection{Transmitter Unit}
-In this section, a transmitter unit should be designed which produces sine waves with 12 different frequency tones and collect them into one wave. For project requirements to be satisfied sinusoidal waves with 1 kHz, 2 kHz, 3 kHz, 5kHz, 6 kHz, 7 kHz, 9 kHz, 10 kHz, 11 kHz, 13 kHz, 14 kHz and 15 kHz frequencies will be produced and collected into one signal which will be transmitted to receiver unit through the wire. Frequencies that 4 kHz and its multiples are not going to be produced and magnitudes of produced signals must be large enough to receiver unit be able to distinguish it from the noise.
+In this section, a transmitter unit should be designed which produces sine waves with 12 different frequency tones and collect them into one wave. For project requirements to be satisfied sinusoidal waves with 1 kHz, 2 kHz, 3 kHz, 5kHz, 6 kHz, 7 kHz, 9 kHz, 10 kHz, 11 kHz, 13 kHz, 14 kHz, and 15 kHz frequencies will be produced, and collected into one signal which will be transmitted to receiver unit through the wire. Frequencies that 4 kHz and its multiples are not going to be produced, and magnitudes of produced signals must be large enough for the receiver unit to be able to distinguish it from the noise.
 
-Therefore, a sine wave generator circuit must be designed which can be produce all the signals above. For this purpose, Wien Bridge Oscillator circuit is a suitable choice. Wien Bridge Oscillator is a is a type of electronic oscillator that generates sine waves that can have a large range of frequencies.
+Therefore, a sine wave generator circuit must be designed which can produce all the signals above. For this purpose, the Wien Bridge Oscillator circuit is a suitable choice. Wien Bridge Oscillator a is a type of electronic oscillator that generates sine waves that can have a large range of frequencies.
 \begin{figure}[h]
     \centering
     \includegraphics[width = 0.35\textwidth]{WIENBRDGE.png}
     \caption{Wien Bridge Oscillator}
 \end{figure} 
-Wien Bridge Oscillator circuit schematic is given in Figure 1. When C1 equal C2, and R3 equals R4, frequency of the signal that is produced by this circuit is calculated using the following formula:
+The Wien Bridge Oscillator circuit schematic is given in Figure 1. When C1 equals C2 and R3 equals R4, the frequency of the signal that is produced by this circuit is calculated using the following formula:
 \[f = \frac{1}{2\pi \sqrt[]{C_1R_3C_2R_4}}\]
 Let \(C_1\), \(C_2\) be C ,and \(R_3\), \(R_4\) be R then frequency is:
 \[f = \frac{1}{2\pi RC}\]
 Hence, if C is set to be \(1\mu F\), R should be calculated to obtain the correct frequency. 
 
-Gain of this circuit is \(\frac{R_1}{R_2}\). If the gain is inadequate,oscillation would be weak,but if the gain is too much, circuit might goes into saturation. In order oscillation to be well, gain should be approximately 2-3. Therefore, \(R_1 = 68k\Omega\) and \(R_2 = 33k\Omega\) and \(V_S = 9V\),\(-V_S = -9V\) would be proper choice.
+Gain of this circuit is \(\frac{R_1}{R_2}\). If the gain is inadequate, oscillation would be weak, but if the gain is too much, the circuit might go into saturation. In order for oscillation to be well, the gain should be approximately 2-3. Therefore, \(R_1 = 68k\Omega\) and \(R_2 = 33k\Omega\) and \(V_S = 9V\),\(-V_S = -9V\) would be proper choice.
 
-From above calculations, it can be calculated that when \(16kHz\) frequency is wanted to be obtain, 1k\(\Omega \) resistors should be used for R value. By doing same calculations following Table 1 and Table 2 can be obtained.
+From the above calculations, it can be calculated that when \(16kHz\) frequency is wanted to be obtained, 1k\(\Omega \) resistors should be used for R-value. By doing same calculations following Table 1 and Table 2 can be obtained.
 \begin{table}[H]
     \begin{center}
         \caption{Required Resistances Corresponding Frequencies 1}
@@ -74,6 +75,7 @@ From above calculations, it can be calculated that when \(16kHz\) frequency is w
         \end{tabular}
     \end{center}
 \end{table}  
+\vspace{-4mm}
 \begin{table}[H]
     \begin{center}
         \caption{Required Resistances Corresponding Frequencies 2}
@@ -89,74 +91,72 @@ From above calculations, it can be calculated that when \(16kHz\) frequency is w
 \end{table}  
 
 
-After generating necessary signals, one should sum this signals into one by using summing amplifier circuit given in Figure 2. 
+After generating necessary signals, one should sum these signals into one by using the summing amplifier circuit given in Figure 2. 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.35\textwidth]{Non-Inv-Sum-Amp.jpg}
     \caption{Non-inverting summing amplifier}
 \end{figure} 
 \subsection{Receiver Unit}
-In this part a receiver needed to be designed. So, let us first define the design requirements.
+In this part, a receiver needed to be designed. So, let us first define the design requirements.
 \begin{itemize}
     \item The receiver should be able extract the desired signal amongst the signals with 12 different frequencies.
     \item The receiver should be able make a difference between the needed signal and others at least 10dB. (Closely related to the Q factor.)
     \item The receiver should provide option of channel adjustment with (at most) 2 potentiometer. Adjustment with 1 pot is the target. 
 \end{itemize}
-In order to design a receiver unit that satisfies the fundamental requirements specified above, a circuit that only allows the signal with desired frequency to pass neeeded to be constructed. So , a filter design is expected which act like as a fourier transformer. There are passive and active filter designs which allows to pass below (low pass) or above (high pass) thereshold frequencies. By combining those two filters one can build a filter which allows only certain band of signals. This is called band pass filter. In this  section the design guides prepared by the Analog Devices Company. (\href{https://www.analog.com/media/en/training-seminars/design-handbooks/basic-linear-design/chapter8.pdf}{Main Source})
+In order to design a receiver unit that satisfies the fundamental requirements specified above, a circuit that only allows the signal with desired frequency to pass needs to be constructed. So, a filter design is expected, which acts like a Fourier transformer. There are passive and active filter designs that allow passing below (low pass) or above (high pass) threshold frequencies. By combining those two filters, one can build a filter that allows only a certain band of signals. This is called a bandpass filter. In this section, the design guides are prepared by Analog Devices Company. (\href{https://www.analog.com/media/en/training-seminars/design-handbooks/basic-linear-design/chapter8.pdf}{Main Source})
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.35\textwidth]{bandpass.png}
     \caption{Filter Responses (ideal)}
 \end{figure} 
-Passive filters are not considered here since they would not be feasable in an adjustable setup. The transfer function of a basic band-pass filter can be presented as following. 
+Passive filters are not considered here since they would not be feasible in an adjustable setup. The transfer function of a basic band-pass filter can be presented as follows. 
 \[
 H(s) = \frac{H_0 (\omega_0)^2}{s^2 + \frac{\omega_0}{Q} s  + (\omega_0)^2}    
 \]
 
-Now let us examine briefly transfer responses in the literature to choose an optimum design path.
+Now let us briefly examine transfer responses in the literature to choose an optimum design path.
 \vspace{-4mm}
 \subsubsection{Butterworth}
-Butterworth transfer response offers clean pass and not-pass regions in other words no ripple. However, the band that allows the signals is not narrow.
+Butterworth transfer response offers clean pass and not-pass regions with no ripple. However, the band that allows the signals is not narrow.
 \vspace{-4mm}
 \subsubsection{Chebyshev}
-Chebyshev transfer response offers narrower band however it has ripples in the pass band.
+Chebyshev transfer response offers a narrower band; however, it has ripples in the passband.
 \subsubsection{Bessel}
-Bessel filter is optimized to obtain better transient response due to a linear phase (i.e.
-constant delay) in the passband.
+Bessel filter is optimized to obtain a better transient response due to a linear phase (i.e., constant delay) in the passband.
 
 \vspace{2mm}
-For our case as long as it is tuned carefully all three transfer responses can be used. However in order to have  better frequency discrimination Chebyshev function is selected to be used in this phase of the project. The values for the Chebyshev function will be fetched from the design tables available in internet. (The table is not included here in order not to excess page limit.)
+For our case, as long as it is tuned carefully, all three transfer responses can be used. However, in order to have better frequency discrimination Chebyshev function is selected to be used in this phase of the project. The values for the Chebyshev function will be fetched from the design tables available on the internet. (The table is not included here in order, not to the excess page limit.)
 
 \vspace{2mm}
-Now let us examine briefly the available design topologies to choose which design path to go for. There are three main topologies for the  band-pass filter design.
+Now let us examine the available design topologies briefly to choose which design path to go for. There are three main topologies for the band-pass filter design.
 \vspace{-4mm}
 \subsubsection{Multiple Feedback Band Pass}
-Multiple feedback band-pass filter designs are widely used (over sallen-key filter) however does not offer much tunability. (\href{https://www.analog.com/media/en/training-seminars/tutorials/mt-220.pdf}{Source})
+Multiple feedback band-pass filter designs are widely used (over sallen-key filter) however, does not offer much tunability. (\href{https://www.analog.com/media/en/training-seminars/tutorials/mt-220.pdf}{Source})
 \vspace{-4mm}
 \subsubsection{State Variable Filter}
 
-This configuration offers the most precise implementation
-of the filter function, at the expense of many more circuit
-elements. All three major parameters (gain, Q, and \(\omega_0\)) can be adjusted independently, and low-pass, high-pass, and band-pass outputs are available simultaneously. Note that the low-pass and high-pass outputs are inverted in phase while the band-pass output maintains the phase. (\href{https://www.analog.com/media/en/training-seminars/tutorials/MT-223.pdf}{Source})
+
+This configuration offers the most precise implementation of the filter function at the expense of many more circuit elements. All three major parameters (gain, Q, and \(\omega_0\)) can be adjusted independently, and low-pass, high-pass, and band-pass outputs are available simultaneously. Note that the low-pass and high-pass outputs are inverted in phase while the band-pass output maintains the phase. (\href{https://www.analog.com/media/en/training-seminars/tutorials/MT-223.pdf}{Source})
 \vspace{-4mm}
 \subsubsection{Dual Amplifier Band Pass}
 
-The dual amplifier band-pass filter structure is useful in designs requiring high Qs and high frequencies. Its component sensitivity is small, and the element spread is low. A useful feature of this circuit is that the Q and resonant frequency can be adjusted more or less independently. (\href{https://www.analog.com/media/en/training-seminars/tutorials/MT-209.pdf}{Source})
+The dual amplifier band-pass filter structure is helpful in designs requiring high Qs and high frequencies. Its component sensitivity is small, and the element spread is low. A useful feature of this circuit is that the Q and resonant frequency can be adjusted more or less independently. (\href{https://www.analog.com/media/en/training-seminars/tutorials/MT-209.pdf}{Source})
 
 \vspace{2mm}
-So, it can be said that both state variable filter and dual amplifier band pass filter is quite suitable for our purposes. In this stage of the project dual amplifier band pass filter topology is selected in order to have less components. Now let us examine general outlook of the topology.
+So, it can be said that both state variable filter and dual amplifier band pass filter are quite suitable for our purposes. In this stage of the project, dual amplifier band pass filter topology is selected in order to have fewer components. Now let us examine the general outlook of the topology.
 \begin{figure}[h]
     \centering
     \includegraphics[width = 0.5\textwidth]{dualbandpass.png}
     \caption{Dual Band-Pass Topology}
 \end{figure} 
-In Figure X the in and out charactherictics also provided. In order to be able to adjust all the range of the needed frequencies, the target frequency for the base design is selected as 7kHz. With the adjustment of safety factor of 1.5 seperation is targeted as 15dB. The resulting (targeted) curve is obtained as given in Figure X.
+In Figure 4, the in and out characteristics are also provided. In order to be able to adjust all the range of the needed frequencies, the target frequency for the base design is selected as 7kHz. With the adjustment of the safety factor of 1.5, separation is targeted as 15dB. The resulting (targeted) curve is obtained as given in Figure 5.
 \begin{figure}[h]
     \centering
     \includegraphics[width = 0.75\textwidth]{response.png}
     \caption{Targeted base frequency response}
 \end{figure} 
-To conclude the receiver unit, the trade-offs for first design steps are created according to the requirements specified. As explained the accuracy of the receiver part dependent on the multiple factors such as the opamp used the Q factor aimed and so on. To avoid misleading false-positive results and preserve the length of the preliminary report no simulation results are given even though they are done. The milestones that will be done in the next phase of the project for the receiver side can be summerized as;
+To conclude the receiver unit, the trade-offs for the first design steps are created according to the requirements specified. As explained, the accuracy of the receiver part is dependent on multiple factors such as the opamp used, the Q factor aimed, and so on. To avoid misleading false-positive results and preserve the length of the preliminary report, no simulation results are given even though they are done. The milestones that will be done in the next phase of the project for the receiver side can be summarized as;
 \begin{itemize}
     \item Filter parameters will be iteratively tuned.
     \item Opamp's for the application will selected and purchased.
@@ -164,16 +164,16 @@ To conclude the receiver unit, the trade-offs for first design steps are created
     \item Real life tests will be conducted and the circuit parameters will be tuned further.
 \end{itemize}
 \subsection{Speaker Unit}
-For this section, there need a speaker unit to play the selected tone ,but since our circuit will have high output resistance compared to speaker's resistance(generally 32Ω) the signal received by speaker would be quite weak. Hence, one should design an amplifier that will not go into saturation to be able to drive the speaker properly. Hence, a non-inverting amplifier circuit given in Figure 6 would be a great choice for it. 
+For this section, there needs a speaker unit to play the selected tone, but since our circuit will have high output resistance compared to the speaker's resistance(planned, 32\(\Omega\)), the signal received by the speaker would be quite weak. Hence, one should design an amplifier that will not go into saturation to be able to drive the speaker properly. Hence, a non-inverting amplifier circuit given in Figure 6 would be a great choice for it. 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.35\textwidth]{Non-Inverting_Amplifier.svg.png}
     \caption{Non inverting amplifier}
 \end{figure} 
-Gain of this circuit is \(1 + \frac{R_2}{R_1}\). Therefore, if output resistance is assumed to be 10k\(\Omega\) and the speaker is 50\(\Omega\) there need a gain around 200 ,and \(R_1\),\(R_2\) should be chosen properly, and one need to adjust the DC voltage supply that \(V_{out}\) is not going to exceed it so that op-amp stays in the linear region and gives correct output that we want. 
-
+Gain of this circuit is \(1 + \frac{R_2}{R_1}\). Therefore, if output resistance is assumed to be 10k\(\Omega\) and the speaker is 50\(\Omega\), there needs a gain of around 200, and \(R_1\),\(R_2\) should be chosen properly, and one needs to adjust the DC voltage supply that \(V_{out}\) is not going to exceed it so that op-amp stays in the linear region and gives correct output that we want. After the necessary magnitude is obtained for the signal, the output of the non-inverting amplifier should be connected to the speaker unit.
+\vspace{-4mm}
 \section{Conclusion}
-In this document, the Preliminary report of the term project of the EE214 course is presented. The transmitter unit, receiver unit and the speaker unit studies for the preliminary design phase are explained respectively in the constrains of the preliminary report.
+In this document, the Preliminary report of the term project of the EE214 course is presented. The transmitter unit, receiver unit, and speaker unit studies for the preliminary design phase are explained respectively in the constraints of the preliminary report.
 
 \end{document}
 
