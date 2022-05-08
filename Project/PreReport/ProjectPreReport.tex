@@ -40,11 +40,25 @@
 %abstract
 %\end{abstract}
 \section{Introduction}
-In this experiment, transformers and MATLAB workshop, we are required to get used to plotting with MATLAB and experimented with different transformer setups. First, we are expected to observe the step-down property of the transformer. Then, the behavior of the transformer with a resistive load is expected to have experimented with different frequencies. The transformer's characteristics are needed to be formulated with an equivalent circuit. Lastly, the advantage of the impedance matching circuit setup is requested to be observed.
 \section{Experimental Results and Discussion}
 The results of the experiment are discussed in the following steps.
 %
-\subsection{Step 1}
+\subsection{Transmitter Unit}
+\subsection{Receiver Unit}
+In this part a receiver needed to be designed. So, let us first define the design requirements.
+\begin{itemize}
+    \item The receiver should be able extract the desired signal amongst the signals with 12 different frequencies.
+    \item The receiver should be able make a difference between the needed signal and others at least 10dB. (Closely related to the Q factor.)
+    \item The receiver should provide option of channel adjustment with (at most) 2 potentiometer. Adjustment with 1 pot is the target. 
+\end{itemize}
+In order to design a receiver unit that satisfies the fundamental requirements specified above, a circuit that only allows the signal with desired frequency to pass neeeded to be constructed. So , a filter design is expected which act like as a fourier transformer. There are passive and active filter designs which allows to pass below (low pass) or above (high pass) thereshold frequencies. By combining those two filters one can build a filter which allows only certain band of signals. This is called band pass filter. Passive filters are not considered here since they would not be feasable in an adjustable setup. Now let us examine the active filters available in the literature to choose an optimum design path. 
+\subsubsection{KHN Filter ( State Variable Filter)}
+\subsubsection{Sallen-Key Band Pass}
+\subsubsection{Multiple Feedback Band Pass}
+
+
+
+\subsection{Speaker Unit}
 
 \section{Conclusion}
 \section*{Appendix A}
