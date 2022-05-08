@@ -21,10 +21,10 @@
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Student 1 : Ahmet Akman 2442366 \\ Student 2: Yusuf Toprak Yıldıran 2444149 \\ Assistant: Onur Selim Kılıç}
+\lhead{Student 1 : Ahmet Akman 2442366 \\ Student 2: Yusuf Toprak Yıldıran 2444149 }
 \rhead{Date: \today \\ Group: Wednesday Morning - 5} 
 %\cfoot{center of the footer!}
-\renewcommand{\headrulewidth}{0.1pt}
+%\renewcommand{\headrulewidth}{0.1pt}
 
 
 
@@ -32,7 +32,7 @@
 \thispagestyle{empty}
 
 \title{Spring 2022 EE214 Project Work  \protect\\ PreliminaryWork }
-\author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 \protect\\ Assistant: Onur Selim Kılıç}
+\author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 }
 \date{\today}
 \maketitle
 \tableofcontents
@@ -49,8 +49,8 @@ In this section, a transmitter unit should be designed which produces sine waves
 Therefore, a sine wave generator circuit must be designed which can be produce all the signals above. For this purpose, Wien Bridge Oscillator circuit is a suitable choice. Wien Bridge Oscillator is a is a type of electronic oscillator that generates sine waves that can have a large range of frequencies.
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{bandpass.png}
-    \caption{Filter Responses (ideal)}
+    \includegraphics[width = 0.35\textwidth]{WIENBRDGE.png}
+    \caption{Wien Bridge Oscillator}
 \end{figure} 
 Wien Bridge Oscillator circuit schematic is given in Figure X. When C1 equal C2, and R3 equals R4, frequency of the signal that is produced by this circuit is calculated using the following formula:
 \[f = \frac{1}{2\pi \sqrt[]{C_1R_3C_2R_4}}\]
@@ -91,8 +91,8 @@ From above calculations, it can be calculated that when \(16kHz\) frequency is w
 After generating necessary signals, one should sum this signals into one by using summing amplifier circuit given in Figure X. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{bandpass.png}
-    \caption{Filter Responses (ideal)}
+    \includegraphics[width = 0.35\textwidth]{Non-Inv-Sum-Amp.jpg}
+    \caption{Non-inverting summing amplifier}
 \end{figure} 
 \subsection{Receiver Unit}
 In this part a receiver needed to be designed. So, let us first define the design requirements.
@@ -104,7 +104,7 @@ In this part a receiver needed to be designed. So, let us first define the desig
 In order to design a receiver unit that satisfies the fundamental requirements specified above, a circuit that only allows the signal with desired frequency to pass neeeded to be constructed. So , a filter design is expected which act like as a fourier transformer. There are passive and active filter designs which allows to pass below (low pass) or above (high pass) thereshold frequencies. By combining those two filters one can build a filter which allows only certain band of signals. This is called band pass filter. In this  section the design guides prepared by the Analog Devices Company. (\href{https://www.analog.com/media/en/training-seminars/design-handbooks/basic-linear-design/chapter8.pdf}{Main Source})
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{bandpass.png}
+    \includegraphics[width = 0.35\textwidth]{bandpass.png}
     \caption{Filter Responses (ideal)}
 \end{figure} 
 Passive filters are not considered here since they would not be feasable in an adjustable setup. The transfer function of a basic band-pass filter can be presented as following. 
@@ -144,7 +144,7 @@ The dual amplifier band-pass filter structure is useful in designs requiring hig
 So, it can be said that both state variable filter and dual amplifier band pass filter is quite suitable for our purposes. In this stage of the project dual amplifier band pass filter topology is selected in order to have less components. Now let us examine general outlook of the topology.
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{dualbandpass.png}
+    \includegraphics[width = 0.5\textwidth]{dualbandpass.png}
     \caption{Dual Band-Pass Topology}
 \end{figure} 
 In Figure X the in and out charactherictics also provided. In order to be able to adjust all the range of the needed frequencies, the target frequency for the base design is selected as 7kHz. With the adjustment of safety factor of 1.5 seperation is targeted as 15dB. The resulting (targeted) curve is obtained as given in Figure X.
