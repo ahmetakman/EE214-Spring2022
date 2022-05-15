@@ -31,7 +31,7 @@
 \begin{document}
 \thispagestyle{empty}
 
-\title{Spring 2022 EE214 Experiment 4  \protect\\ Bipolar Junction Transistor Characteristics}
+\title{Spring 2022 EE214 Experiment 5  \protect\\ Bipolar Junction Transistor Characteristics}
 \author{Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 \protect\\ Assistant: Onur Selim Kılıç}
 \date{\today}
 \maketitle
@@ -40,38 +40,54 @@
 %abstract
 %\end{abstract}
 \section{Introduction}
-In this experiment, using diode test method checking if BJT transistor is NPN or PNP will be applied ,and setting up a correct test environment with BenchVue will be learned Afterwards, input-output characteristics of both NPN and PNP bipolar junction transistors will be investigated.
+In this experiment, using the diode test method, checking if the BJT transistor is NPN or PNP will be applied, and setting up a correct test environment with BenchVue will be learned. Finally, input-output characteristics of both NPN and PNP bipolar junction transistors will be investigated.
 
 \section{Experimental Results and Discussion}
 The results of the experiment are discussed in the following steps.
 %
 \subsection{Step 1}
+In this step of the experiment, it is investigated whether the transistors in the lab are working or not. To check, the diode test feature of the digital multimeter is used. The multimeter gives a buzz when the PN junction is connected in the forward direction. To illustrate what is inside a transistor, a representative figure for an NPN transistor is given in Figure 1.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{bjt.png}
+    \caption{NPN BJT Sketch}
+\end{figure} 
+So, for NPN BJT, the multimeter buzzes for base-emitter and base-collector directions. Similarly, for PNP BJT, the multimeter buzz for emitter-base and collector-base directions.
 
 \subsection{Step 2}
-In this part of the experiment,\(I_B\) vs \( V_{BE}\) characteristics of the NPN type BJT transitor is obtained. After setting up the following common emmitter circuit in the Figure X, a test environment named BenchVue Test Flow is designed by following the steps below:
+In this part of the experiment,\(I_B\) vs \( V_{BE}\) characteristics of the NPN type BJT transitor is obtained.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{step2.png}
+    \caption{Circuit schematic for the step 2}
+\end{figure} 
+
+After setting up the following common-emitter circuit in Figure 2, a test environment named BenchVue Test Flow is designed by following the steps below:
 \begin{itemize}
     \item i. Initialize and launch the devices.
     Launch the program BenchVue, which you can find on the desktop.
     In this experiment, we will use the digital multimeter and DC power supply. Firstly,
-    turn on these devices manually. Then, launch the devices “DMM” (Digital Multimeter)
-    and “Power Supply” by double clicking on their icons, which you can find at the lower
+    turn on these devices manually. Then, launch the device “DMM” (Digital Multimeter)
+    and “Power Supply” by double-clicking on their icons, which you can find in the lower
     right corner of the BenchVue screen. This action will activate the remote mode on these
-    devices. In remote mode, control of these devices are completely transferred to the
-    BenchVue program and you can no longer control the devices using their buttons.
-    Observe that the launched devices are now at the lower left corner of the screen. You
-    can reach the control panel of the devices by double clicking on them. Take a look at
+    devices. In remote mode, control of these devices is completely transferred to the
+    BenchVue program, and you can no longer control the devices using their buttons.
+    Observe that the launched devices are now at the lower-left corner of the screen. You
+    can reach the control panel of the devices by double-clicking on them. Take a look at
     the control panel of both devices.
     \item ii. Construct the test flow. Test flow is a sequence of commands through which we can control
     the settings of devices and take measurements from the devices.
     Open the control panel of the Power supply. You will see three channels, each of which
-    having a separate panel. +6V, +25V, and -25V outputs of the DC power supply are
-    referred as the first, second and the third channels, respectively.
-    Output state of these channels are at the upper right corner of the panel belonging to
+    has a separate panel. +6V, +25V, and -25V outputs of the DC power supply are
+    referred to as the first, second, and third channels, respectively.
+    The output state of these channels is at the upper right corner of the panel belonging to
     each channel, on which either “On” or “Off” is written. As a first step, we need to switch
     on the output states of the channels that we will use. In this experiment, we will use
     +6V (CH1) and +25V (CH2) outputs of the DC power supply. Click on the orange box
     enclosing the output states of these channels and drag them, respectively, into the test
-    flow on the right hand side of the screen. Choose “Set”, and choose “On”.
+    flow on the right-hand side of the screen. Choose “Set”, and choose “On”.
     Click and drag the orange box enclosing “Voltage Setting” of +25V output (CH2) into
     the test flow. Choose “Set”. Enter 9V into the box.
     Click and drag the orange box enclosing “Voltage Setting” of +6V output (CH1) into
@@ -92,29 +108,70 @@ In this part of the experiment,\(I_B\) vs \( V_{BE}\) characteristics of the NPN
     drag the readout box into the right of the “=” sign, so that the current reading is assigned
     to the variable “Ib”.
     We will calculate the base-emitter voltage and assign it into a variable named “Vbe”.
-    Create this variable and prepare the assignment procedure just as you did for “Ib” in prvious step. (Repeat the procedure)
-    “Vbe” is equal to voltage drop across the base resistor subtracted from the voltage value
-    of 6V power supply. Using subtraction and multiplication boxes fill in the boxes on right. 
+    Create this variable and prepare the assignment procedure just as you did for “Ib” in previous step. (Repeat the procedure)
+    “Vbe” is equal to the voltage drop across the base resistor subtracted from the voltage value
+    of 6V power supply. Using subtraction and multiplication boxes, fill in the boxes on the right. 
     Assignment of “Vbe” was the last step that will be done inside the sweep. Set the output
     states as “Off” outside the sweep box which will conclude the flow.
-    At the end, the test flow should look like Figure x.
-    \item iii. By using multimeter as an ammeter(HP34401A), clicked on run button. Then, by selecting X-Y chart \(I_B vs B_{BE}\) plot is obtained as in the Figure x.
+    In the end, the test flow should look like Figure x.
+    \item iii. By using a multimeter as an ammeter(HP34401A), click on the run button. Then, by selecting X-Y chart \(I_B vs. B_{BE}\) plot is obtained as in Figure 3.
 \end{itemize}
 
-Afterwards, designed circuit is tested on this environment and as seen in the Figure X, plot is like i-v characteristics of a diode with opening voltage is around 600mV,since Vbe is a PN junction. If it is commented on it, it can be said that after \( V_{BE}\) is passed 600mV current starts to flow, so \( V_{BE}\) can be called opening voltage.    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2_1.png}
+    \caption{Plot obtained for the step 2}
+\end{figure} 
+
+Afterward, the designed circuit is tested in this environment, and as seen in Figure 3, the plot is like the i-v characteristics of a diode with an opening voltage is around 600mV since Vbe is a PN junction. If it is commented on it, it can be said that after \( V_{BE}\) is passed, 600mV current starts to flow, so \( V_{BE}\) can be called opening voltage.    
 
 \subsection{Step 3}
 
 \subsubsection{a)} 
-In this part, circuit in Figure x is set and \(I_C\) vs \(V_{CB}\) characteristics of NPN transitor is investigated by again setting up an proper test environment using BenchVue. 
-Since there are 2 voltage sources to be swept, first +25V channel is swept from 4V to 6V with steps of 1V, and then other source(6V channel) is swept inside of previous swept block from 1V to 6V with 0.5V steps.  
-Afterwards, following plot is obtained in Figure x. The reason why we observed \(I_C\) current while \(V_{CB}\) is negative is because \(V_{BC}\) is positive and allows current to flow from base to collector.
+In this part, the circuit in Figure 4 is set, and \(I_C\) vs. \(V_{CB}\) characteristics of the NPN transistor are investigated by again setting up a proper test environment using BenchVue. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{step3.png}
+    \caption{Circuit schematic for the step 3 part a}
+\end{figure} 
+
+Since there are two voltage sources to be swept, first +25V channel is swept from 4V to 6V with steps of 1V, and then another source(6V channel) is swept inside of the previous swept block from 1V to 6V with 0.5V steps.  
+Afterward, the following plot is obtained in Figure 5. The reason why we observed \(I_C\) current while \(V_{CB}\) is negative is because \(V_{BC}\) is positive and allows current to flow from base to collector.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{3_1.png}
+    \caption{Plot obtained for the step 3 part a}
+    \end{figure} 
 \subsubsection{b)}
-For this step, circuit in Figure X is set in order to observe \(I_C\) vs \(V_{BC}\) characteristics of PNP transitor(C557B) with a suitable test environment as in previous part in BenchVue. To be able to run the circuit in forward bias B-E junction and use same the environment settings with previous part in this part, voltage sources should be reverse connected for the Figure x. Then, step 3 part a) is repeated for this circuit and Figure x is obtained. Because of the diode model, the fact that the direction definiton of \(I_C\) is changed is noted that. 
+For this step, the circuit in Figure 4 is set in order to observe \(I_C\) vs. \(V_{BC}\) characteristics of the PNP transistor(C557B) with a suitable test environment as in the previous part in BenchVue. To be able to run the circuit in forward bias B-E junction and use the same environment settings as the previous part in this part, voltage sources should be reverse connected for the Figure 4. Then, step 3, part a) is repeated for this circuit, and Figure 6 is obtained. Because of the diode model, the fact that the direction definition of \(I_C\) is changed is noted. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{3_2.png}
+    \caption{Plot obtained for the step 3 part b}
+    \end{figure} 
 \subsection{Step 4}
+In this step, the circuit in Figure 7 is set in order to observe \(I_C\) vs. \(V_{CE}\) characteristics of the NPN transistor(C547B) with a proper test environment as done in previous steps in BenchVue. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{step4.png}
+    \caption{Circuit schematic for the step 4}
+    \end{figure} 
+\subsection{Step 4}
+So as a result the plot given in Figure 8 is obtained
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{4_1.png}
+    \caption{Plot obtained for the step 4}
+    \end{figure} 
+
+It can be said that there are slopes for the forward active regions of the transistor. This is called the early effect. The early effect is stemmed from the fact that effective base width changes with the applied base-collector voltage. The early voltage is defined and can be calculated with the interpolation of the forward region lines and finding the voltage in which the interpolated line intersects with the x-axis. This technique is illustrated in Figure 8 as well. 
 
 \section{Conclusion}
-In this experiment, using diode test method checking if BJT transistor is NPN or PNP will is applied ,and setting up a correct test environment with BenchVue is learned Afterwards, input-output characteristics of both NPN and PNP bipolar junction transistors are investigated.
+In this experiment, using the diode test method, checking if BJT transistor is NPN or PNP will is applied, and setting up a correct test environment with BenchVue is learned. Afterward, input-output characteristics of both NPN and PNP bipolar junction transistors are investigated.
 
 \section*{Appendix A}
 \begin{itemize}
