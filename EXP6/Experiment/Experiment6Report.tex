@@ -50,7 +50,48 @@ The results of the experiment are discussed in the following steps.
 \subsubsection{b.}
 
 \subsection{Step 2}
+In this step the circuit given in Figure X is constructed. The switch was kept open. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{lowqlowpass.png}
+    \caption{Circuit schematic for the step 2}
+\end{figure} 
+Then similar to the previous step, a test flow on the BenchVue is ran. Then the outputs of the test flow is exported as a MATLAB data file. The data is imported in MATLAB .The plots of phase response and magnitude response is plotted which are given in Figures X and X.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2_1_2.png}
+    \caption{Phase Response of the Low-Q RLC filter.}
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{2_1_1.png}
+    \caption{Magnitude Response of the Low-Q RLC filter.}
+\end{figure} 
+The value fo the \(\omega_c\) is pinned in the magnitude response plot. As a result it can be concluded that the circuit is an example of a passive low pass filter. Low pass filters allow only the frequencies below the thereshold.  By looking at the sharpness of the responses it can be said that the Q (the quality factor) of the circuit is low. 
+    
 \subsection{Step 3}
+In this step the circuit given in Figure X is set on the breadboard. The C value is taken as 0.01\(\mu F\) as it was found in the preliminary work. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{highqbandpass.png}
+    \caption{Circuit schematic for the step 3}
+\end{figure} 
+Then similar to the previous steps the test flow on BenchVue is ran. As a result the magnitude and the phase responses given in Figures X and X are obtained. 
+file. The data is imported in MATLAB .The plots of phase response and magnitude response is plotted which are given in Figures X and X.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{3_1_2.png}
+    \caption{Phase Response of the High-Q RLC filter.}
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{3_1_1.png}
+    \caption{Magnitude Response of the High-Q RLC filter.}
+\end{figure} 
+The values \(\omega_{c1}\) ,\(\omega_{0}\) and \(\omega_{c2}\)  are indicated in the magnitude response plot with data pins. This filter is a band pass filter that only allows certain band of freqencies to pass on. The Q (Quality Factor) of the filter is calculated as 3.821 which can be consired as a high Q.  This also intuitively gives an idea on the sharpness of the phase angle plot.  
+
 \subsection{Step 4}
 \subsubsection{a.}
 
