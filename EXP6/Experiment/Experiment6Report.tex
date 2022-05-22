@@ -41,7 +41,7 @@
 %abstract
 %\end{abstract}
 \section{Introduction}
-In this experiment, Frequency Response, 4 different setups of filter circuits will be experimented with. First, ahighpass filter with a resistor and a capacitor will be set and its characartheristics will be observed. Then a lowpass filter with an inductor and a resistor will be constructed and its behaviour will be observed. A high-q RLC bandpass filter will be set and its quality factor will be determined. Lastly, a square wave applied to band pass and a half rectified sinusoidal is filtered. As a result the waves that are included in a signal needed to be observed.
+In this experiment, Frequency Response, four different setups of filter circuits will be experimented with. First, a high pass filter with a resistor and a capacitor will be set, and its characteristics will be observed. Then a lowpass filter with an inductor and a resistor will be constructed, and its behavior will be observed. A high-q RLC bandpass filter will be set, and its quality factor will be determined. Lastly, a square wave is applied to the bandpass, and a half rectified sinusoidal is filtered. As a result, the waves that are included in a signal need to be observed.
 \section{Experimental Results and Discussion}
 The results of the experiment are discussed in the following steps.
 
@@ -53,7 +53,7 @@ In this step, circuit given in Figure 1 is set with its settings and sine wave o
     \caption{Circuit schematic for step 1}
 \end{figure} 
 \subsubsection{a.}
-For this part, half-power angular frequency is determined by changing the input frequency manually untill obsetving \(V_0\) equals to 0.7 times of input voltage, and cutoff frequency(half-power frequency) is found as approximately 500Hz.
+For this part, half-power angular frequency is determined by changing the input frequency manually until observing \(V_0\) equals 0.7 times of input voltage, and the cutoff frequency(half-power frequency) is found as approximately 500Hz.
 \subsubsection{b.}
 For this part, magnitude and phase responses of the circuit in Figure 1 are obtained by using the BenchVue test flow. In order to do this,
 \begin{itemize}
@@ -62,13 +62,13 @@ For this part, magnitude and phase responses of the circuit in Figure 1 are obta
     \item After running the test, magnitude vs frequeny plot is obtained. 
     \item Then, data is imported to MATLAB and magnitude and phase response plots are obtained by indicating the cutoff frequency in te plot.
 \end{itemize}
-To obtain magnitude ch2 voltage measurement vector is divided by ch1 voltage measurement vector by pairwise(using ./) and magnitude response is plotted as magnitude in the y axis and frequency measurement is in the x axis in Figure 2.
+To obtain magnitude ch2 voltage measurement vector is divided by the ch1 voltage measurement vector pairwise(using ./), and magnitude response is plotted as magnitude on the y axis, and frequency measurement is on the x-axis in Figure 2.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{{1_1_1.png}}
     \caption{Magnitude response of circuit 1}
 \end{figure} 
-To obtain phase response a plot in which mod(phase-measurement+180,360)-180 is in the y axis and frequency measurement vector is in the x axis is obtained in Figure 3.
+To obtain phase response, a plot in which mod(phase-measurement+180,360)-180 is on the y axis and the frequency measurement vector is on the x-axis is obtained in Figure 3.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{{1_1_2.png}}
@@ -77,13 +77,13 @@ To obtain phase response a plot in which mod(phase-measurement+180,360)-180 is i
 Since high pass filter allows frequencies that greater than the cutoff frequency to pass, by looking at the magnitude response it can be said that this filter is highpass filter.
 
 \subsection{Step 2}
-In this step the circuit given in Figure X is constructed. The switch was kept open. 
+In this step the circuit given in Figure 4 is constructed. The switch was kept open. 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{lowqlowpass.png}
     \caption{Circuit schematic for the step 2}
 \end{figure} 
-Then similar to the previous step, a test flow on the BenchVue is ran. Then the outputs of the test flow is exported as a MATLAB data file. The data is imported in MATLAB .The plots of phase response and magnitude response is plotted which are given in Figures X and X.
+Then similar to the previous step, a test flow on the BenchVue is run. Then the outputs of the test flow are exported as a MATLAB data file. The data is imported in MATLAB. The plots of phase response and magnitude response are plotted, which are given in Figures 5 and 6.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{2_1_2.png}
@@ -95,17 +95,16 @@ Then similar to the previous step, a test flow on the BenchVue is ran. Then the 
     \includegraphics[width = 0.75\textwidth]{2_1_1.png}
     \caption{Magnitude Response of the Low-Q RL filter.}
 \end{figure} 
-The value fo the \(\omega_c\) is pinned in the magnitude response plot. As a result it can be concluded that the circuit is an example of a passive low pass filter. Low pass filters allow only the frequencies below the thereshold.  By looking at the sharpness of the responses it can be said that the Q (the quality factor) of the circuit is low. 
+The value of the \(\omega_c\) is pinned in the magnitude response plot. As a result, it can be concluded that the circuit is an example of a passive low pass filter. Low pass filters allow only the frequencies below the threshold. By looking at the sharpness of the responses, it can be said that the Q (the quality factor) of the circuit is low. 
     
 \subsection{Step 3}
-In this step the circuit given in Figure X is set on the breadboard. The C value is taken as 0.01\(\mu F\) as it was found in the preliminary work. 
+In this step the circuit given in Figure 7 is set on the breadboard. The C value is taken as 0.01\(\mu F\) as it was found in the preliminary work. 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{highqbandpass.png}
     \caption{Circuit schematic for the step 3}
 \end{figure} 
-Then similar to the previous steps the test flow on BenchVue is ran. As a result the magnitude and the phase responses given in Figures X and X are obtained. 
-file. The data is imported in MATLAB .The plots of phase response and magnitude response is plotted which are given in Figures X and X.
+Then similar to the previous steps, the test flow on BenchVue is run. The results are exported to a Matlab data file. The data is imported in MATLAB. The plots of phase response and magnitude response are plotted, which are given in Figures 8 and 9.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{3_1_2.png}
@@ -117,46 +116,45 @@ file. The data is imported in MATLAB .The plots of phase response and magnitude 
     \includegraphics[width = 0.75\textwidth]{3_1_1.png}
     \caption{Magnitude Response of the High-Q RLC filter.}
 \end{figure} 
-The values \(\omega_{c1}\) ,\(\omega_{0}\) and \(\omega_{c2}\)  are indicated in the magnitude response plot with data pins. This filter is a band pass filter that only allows certain band of freqencies to pass on. The Q (Quality Factor) of the filter is calculated as 3.821 which can be consired as a high Q.  This also intuitively gives an idea on the sharpness of the phase angle plot.  
+The values \(\omega_{c1}\) ,\(\omega_{0}\) and \(\omega_{c2}\)  are indicated in the magnitude response plot with data pins. This filter is a bandpass filter that only allows a certain band of frequencies to pass on. The Q (Quality Factor) of the filter is calculated as 3.821, which can be considered a high Q. This also intuitively gives an idea of the sharpness of the phase angle plot.  
 
 \subsection{Step 4}
 In this step, circuit in Step 3 is used.
 \subsubsection{a.}
-For this step, a square wave at the resonant frequency where magnitude response is equal to 1 is applied and then input and output voltages are plotted in figure x.
-Since this pircuit passes some frequency interval to pass it is called bandpass filter.  
+For this step, a square wave at the resonant frequency where magnitude response is equal to 1 is applied and then input and output voltages are plotted in Figure 10.
+Since this circuit passes some frequency interval to pass it is called a bandpass filter.  
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{{STP4ct.png}}
-    \caption{Frequency response of circuit 1}
+    \includegraphics[width = 0.75\textwidth]{{4_1_1.png}}
+    \caption{Frequency response of  square wave applied bandpass filter}
 \end{figure} 
 \subsubsection{b.}
-For this step, circuit in figure x is set and a sine wave at the resonant frequency is applied. Then, \(V_{01}\) and \(V_{02}\) plot is obtained in Figure x.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.75\textwidth]{{STP4ct.png}}
-    \caption{Frequency response of circuit 1}
-\end{figure} 
+For this step, circuit in Figure 11 is set and a sine wave at the resonant frequency is applied. Then, \(V_{01}\) and \(V_{02}\) plot is obtained in Figure 12.
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{{STP4ct.png}}
-    \caption{Frequency response of circuit 1}
+    \caption{Circuit for step 4 part b}
 \end{figure} 
-Since there is a capacitor at the load, capacitor discharges in the negative cycle of the input. Therefore, \(V_{01}\) is measured as sine wave while \(V_{02}\) is 0 at the negative cycle.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{{4_2_1.png}}
+    \caption{Frequency phase response of the circuit step 4 part b.}
+\end{figure} 
+Since there is a capacitor at the load,the capacitor discharges in the negative cycle of the input. Therefore, \(V_{01}\) is measured as a sine wave while \(V_{02}\) is 0 at the negative cycle.
 
 
 \section{Conclusion}
-In this experiment, Frequency Response, 4 different setups of filter circuits are experimented with. First, a highpass filter with a resistor and a capacitor is set and its characartheristics are observed. Then a lowpass filter with an inductor and a resistor is constructed and its behaviour is observed. A high-q RLC bandpass filter will be set and its quality factor is determined. Lastly, a square wave applied to band pass and a half rectified sinusoidal is filtered. As a result the waves that are included in a oblique signal are observed.
+In this experiment, Frequency Response, four different setups of filter circuits are experimented with. First, a highpass filter with a resistor and a capacitor is set, and its characteristics are observed. Then a lowpass filter with an inductor and a resistor is constructed, and its behavior is observed. A high-q RLC bandpass filter will be set, and its quality factor will be determined. Lastly, a square wave is applied to the bandpass, and a half rectified sinusoidal is filtered. As a result, the waves that are included in an oblique signal are observed.
 
 
 \section*{Appendix A}
 \begin{itemize}
-    \item PreLab Preparation 3 hours
+    \item PreLab Preparation 2 hours
     \item Experimental Work 2  hours
-    \item Report Writing 8 hours
+    \item Report Writing 9 hours
 \end{itemize}
-\section*{Appendix B}
-In this experiment, since the values the students obtained in the lab is quite close to the data provided by the lab assistants, it is preffered to use the data obtained by the students.
 
 \end{document}
 
