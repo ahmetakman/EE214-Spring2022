@@ -34,8 +34,68 @@
 
 %\section{Introduction}
 \section{Step 1}
-\section{Conclusion}
+In this step the circuit given in Figure 1 is examined.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{fig1.png}
+    \caption{Circuit schematic for the step 1}
+\end{figure} 
+\section{Step 2}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{fig2.png}
+\caption{Circuit schematic for the step 2}
+\end{figure} 
+\section{Step 3}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{fig3.png}
+    \caption{Circuit schematic for the step 3}
+\end{figure} 
+\section{Simulations}
+\subsection*{a}
+The circuit given in Figure 1 is constructed in LTSpice environment as shown in Figure 4.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{fig1sim.png}
+    \caption{Circuit simulation schematic}
+\end{figure} 
 
+As a result the magnitude response is obtained and plotted as given in Figure 5.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{1_1_1.png}
+    \caption{Magnitude response of the circuit}
+\end{figure}
+It can be said that the circuit indeed functions as a low pass filter.
+\subsection*{b} 
+The circuit given in Figure 3 is constructed in LTSpice environment as shown in Figure 6.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{fig3sim.png}
+    \caption{Circuit simulation schematic }
+\end{figure} 
+
+As a result the frequency magnitude response given in Figure 7 is obtained.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{2_1_1.png}
+    \caption{Magnitude response of the circuit}
+\end{figure} 
+
+After removing the 10k and 6.8k resistors and connecting the positive terminal of the opamp to ground the response shown in Figure 8 is obtained.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{2_1_2.png}
+    \caption{Magnitude response of the circuit (the resistors are removed)}
+\end{figure} 
+As a result it can be said that the removal of the resistors costs the high frequency filtering ability of the circuit. On the other hand the in this setup the circuit has no or quite less gain. 
+
+\section{Conclusion}
+In this document, the preliminary work simulation results of the Experiment 7 are presented.
 \section*{Appendix A}
 The results of the simulations are fetched from LTSpice and plotted in MATLAB in order to make the plots more readable and convenient.
 
