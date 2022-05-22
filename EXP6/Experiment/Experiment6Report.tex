@@ -59,7 +59,7 @@ For this part, magnitude and phase responses of the circuit in Figure 1 are obta
 \begin{itemize}
     \item Agilent Signal Generator and oscilloscope are intialized with 20V pp.
     \item Test flow is constructed by using sweep option from \(\frac{f_c}{5}\)(half-power frequency/5) to \(5f_c\) with \(\frac{f_c}{5}\) steps.
-    \item After running the test, magnitude vs frequeny plot is obtained. 
+    \item After running the test, magnitude vs frequency plot is obtained. 
     \item Then, data is imported to MATLAB and magnitude and phase response plots are obtained by indicating the cutoff frequency in te plot.
 \end{itemize}
 To obtain magnitude ch2 voltage measurement vector is divided by the ch1 voltage measurement vector pairwise(using ./), and magnitude response is plotted as magnitude on the y axis, and frequency measurement is on the x-axis in Figure 2.
@@ -119,9 +119,9 @@ Then similar to the previous steps, the test flow on BenchVue is run. The result
 The values \(\omega_{c1}\) ,\(\omega_{0}\) and \(\omega_{c2}\)  are indicated in the magnitude response plot with data pins. This filter is a bandpass filter that only allows a certain band of frequencies to pass on. The Q (Quality Factor) of the filter is calculated as 3.821, which can be considered a high Q. This also intuitively gives an idea of the sharpness of the phase angle plot.  
 
 \subsection{Step 4}
-In this step, circuit in Step 3 is used.
+
 \subsubsection{a.}
-For this step, a square wave at the resonant frequency where magnitude response is equal to 1 is applied and then input and output voltages are plotted in Figure 10.
+In this step, circuit in Step 3 is used. For this step, a square wave at the resonant frequency where magnitude response is equal to 1 is applied and then input and output voltages are plotted in Figure 10.
 Since this circuit passes some frequency interval to pass it is called a bandpass filter.  
 \begin{figure}[H]
     \centering
@@ -142,7 +142,7 @@ For this step, circuit in Figure 11 is set and a sine wave at the resonant frequ
     \includegraphics[width = 0.75\textwidth]{{4_2_1.png}}
     \caption{Frequency phase response of the circuit step 4 part b.}
 \end{figure} 
-Since there is a capacitor at the load,the capacitor discharges in the negative cycle of the input. Therefore, \(V_{01}\) is measured as a sine wave while \(V_{02}\) is 0 at the negative cycle.
+Since there is a capacitor at the load,the capacitor discharges in the negative cycle of the input. Therefore, \(V_{01}\)(\(V_{out}\)) is measured as a sine wave while \(V_{02}\) is 0 at the negative cycle.
 
 
 \section{Conclusion}
