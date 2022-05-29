@@ -1,4 +1,5 @@
 
+
 \documentclass[letterpaper,12pt]{article}
 \usepackage{tabularx} % extra features for tabular environment
 \usepackage{amsmath}  % improve math presentation
@@ -60,17 +61,16 @@ In this part, circuit in figure 1 is set with an input sine wave of 1V peak. The
     \begin{center}
         \caption{Measurements}
         \vspace{2mm}
-        \begin{tabular}{||c | c | c | c | c | c||} 
+        \begin{tabular}{||c | c | c | c | c||} 
             \hline
-            \(w_c\) & \(H(w_c)\) & \(|H(w_c)|\) & \(|H(w_0)|\) & \(H(w_0)\) \\ [0.5ex] 
+             \(H(w_c)\) & \(|H(w_c)|\) & \(|H(w_0)|\) & \(H(w_0)\) \\ [0.5ex] 
             \hline\hline
-            a & a & a & a & a \\ 
+             11.85kHz & 1.603V & 2.3V & 20.35kHz \\ 
         
             \hline
         \end{tabular}
     \end{center}
     \end{table}
-
 Afterward, frequency and phase response of the cicuit are obtained using computer BenchVue test flow with DC sweep from \(\frac{f_c}{5}\) to \(5f_c\) with the steps \(\frac{f_c}{10}\).
 
 After making necessary test flow settings and run the test, magnitude and frequency responses of the circuit are obtained. Then, datas are exported to MATLAB and \(w_0\) ,\(w_1\), and \(w_2\) are determined from magnitude response plot and showed as in Figure 2.  
@@ -154,3 +154,5 @@ In this experiment, active RC low-pass and band-pass filter are studied. Their c
 	\includegraphics[scale=0.25]{2a_plot.pdf}}
 	\caption{Experiment 2}
 \end{figure}
+
+
