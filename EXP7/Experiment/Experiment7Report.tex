@@ -45,6 +45,40 @@
 \section{Experimental Results and Discussion}
 The results of the experiment are discussed in the following steps.
 \subsection{Step 1}
+
+In this part, circuit in figure 1 is set with an input sine wave of 1V peak. Then, max output voltage is found and recordeed as center frequency by manually changing the frequency. Afterwards, half power frequency which is equal to 0.7 times of the center frequency is found by trying the frequencies and these values are recorded in table 1.   
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{{1_1.png}}
+    \caption{Circuit for step 1}
+\end{figure}
+
+
+\begin{table}[H]
+    \begin{center}
+        \caption{Measurements}
+        \vspace{2mm}
+        \begin{tabular}{||c | c | c | c | c | c||} 
+            \hline
+            \(w_c\) & \(H(w_c)\) & \(|H(w_c)|\) & \(|H(w_0)|\) & \(H(w_0)\) \\ [0.5ex] 
+            \hline\hline
+            a & a & a & a & a \\ 
+        
+            \hline
+        \end{tabular}
+    \end{center}
+    \end{table}
+
+Afterwards, frequency and phase response of the cicuit are obtained using computer BenchVue test flow with DC sweep from \(\frac{f_c}{5}\) to \(5f_c\) with the steps \(\frac{f_c}{10}\).
+
+After making necessary test flow settings and run the test, magnitude and frequency responses of the circuit are obtained. Then, datas are exported to MATLAB and \(w_0\) ,\(w_1\), and \(w_2\) are determined from magnitude response plot and showed as in Figure 2.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{{1_1.png}}
+    \caption{Magnitude and Phase response of circuit 1}
+\end{figure}
+
 \subsection{Step 2}
 
 
