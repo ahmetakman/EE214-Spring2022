@@ -51,7 +51,7 @@ The results of the experiment are discussed in the following steps.
 In this part, circuit in figure 1 is set with an input sine wave of 1V peak. Then, max output voltage is found and recordeed as center frequency by manually changing the frequency. Afterwards, half power frequency which is equal to 0.7 times of the center frequency is found by trying the frequencies and these values are recorded in table 1.   
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.75\textwidth]{{1_1.png}}
+    \includegraphics[width = 0.75\textwidth]{{lowpass.png}}
     \caption{Circuit for step 1}
 \end{figure}
 
@@ -71,7 +71,7 @@ In this part, circuit in figure 1 is set with an input sine wave of 1V peak. The
     \end{center}
     \end{table}
 
-Afterwards, frequency and phase response of the cicuit are obtained using computer BenchVue test flow with DC sweep from \(\frac{f_c}{5}\) to \(5f_c\) with the steps \(\frac{f_c}{10}\).
+Afterward, frequency and phase response of the cicuit are obtained using computer BenchVue test flow with DC sweep from \(\frac{f_c}{5}\) to \(5f_c\) with the steps \(\frac{f_c}{10}\).
 
 After making necessary test flow settings and run the test, magnitude and frequency responses of the circuit are obtained. Then, datas are exported to MATLAB and \(w_0\) ,\(w_1\), and \(w_2\) are determined from magnitude response plot and showed as in Figure 2.  
 
@@ -82,6 +82,32 @@ After making necessary test flow settings and run the test, magnitude and freque
 \end{figure}
 
 \subsection{Step 2}
+In this step the circuit given in Figure 3 is constructed.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{{bandpass.png}}
+    \caption{Circuit for step 2}
+\end{figure}
+
+\subsubsection{a)}
+The frequency magnitude and frequency phase response of the circuit is obtained and given in Figure 4.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{{2_1.png}}
+    \caption{Magnitude and Phase response of circuit 2}
+\end{figure}
+
+\subsubsection{b)}
+The resistors on the positive feedback side , a.k.a. the resistors of 6.8k and 10k are disconnected and the V+ is terminal is grounded. As a result the frequency magnitude and frequency phase responses are obtained and shown in Figure 5.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.75\textwidth]{{2_2.png}}
+    \caption{Magnitude and Phase response of circuit 2 without the resistors}
+\end{figure}
+
 
 
 \section{Conclusion}
