@@ -49,8 +49,8 @@ So, in order to overcome the challange of generating sinusoids with needed frequ
 In the transmitter unit, sinusoidal signals with frequencies 1\(kHz\), 2\(kHz\), 3\(kHz\), 5\(kHz\), 6\(kHz\), 7\(kHz\), 9\(kHz\), 10\(kHz\), 11\(kHz\), 13\(kHz\), 14\(kHz\), 15\(kHz\) are aimed to be produced and then collected into a single waveform by avoiding to produce 4\(kHz\), 8\(kHz\), 12\(kHz\) frequencies. 
 
 \subsection{Astable Multivibrator}
-In order to obtain a waveform which includes these all 12 sinusoids with different frequencies, 1\(kHz\) and 2\(kHz\) square waves are considered to be summed up based on the idea fourier transformation. The reason behind this is that summing of sinusoids with frequencies 1\(kHz\), 3\(kHz\), 5\(kHz\), 7\(kHz\), 9\(kHz\), 11\(kHz\), 13\(kHz\), 15\(kHz\) is result in 1\(kHz\) square wave waveform and similarly summing of the rest of the sinusoidal signals that must be produced is result in a 2\(kHz\) square wave signal. For this to be achieved, 2 square wave generator circuits were designed to generate 1\(kHz\) which is given in Figure 1 and 2\(kHz\) given in Figure 2 square waves. Since higher frequencies that constitute the square wave are low in their magnitude, generating and filtering them precisely is harder. Therefore, for example one need generate 1\(kHz\) square wave precisely to be able to include a nice 13\(kHz\) and 15\(kHz\) sine waves.
-Also in order to be able to generate a square wave with smaller rise and fall time tl071 op-amp (\href{https://www.st.com/resource/en/datasheet/tl071.pdf}{datasheet} ) which has a big slew rate is used. Additionally for the same reason BS-170 (\href{https://www.onsemi.com/pdf/datasheet/mmbf170-d.pdf}{datasheet} )N channel enchancement mode mosfets are used as an inverter.  
+In order to obtain a waveform that includes these all 12 sinusoids with different frequencies, 1\(kHz\) and 2\(kHz\) square waves are considered to be summed up based on the idea fourier transformation. The reason behind this is that the summing of sinusoids with frequencies 1\(kHz\), 3\(kHz\), 5\(kHz\), 7\(kHz\), 9\(kHz\), 11\(kHz\), 13\(kHz\), 15\(kHz\) results in 1\(kHz\) square wave waveform and similarly summing of the rest of the sinusoidal signals that must be produced is result in a 2\(kHz\) square wave signal. For this to be achieved, 2 square wave generator circuits were designed to generate 1\(kHz\) which is given in Figure 1, and 2\(kHz\) given in Figure 2 square waves. Since higher frequencies that constitute the square wave are low in their magnitude, generating and filtering them precisely is harder. Therefore, for example, one needs to generate 1\(kHz\) square wave precisely to be able to include a nice 13\(kHz\) and 15\(kHz\) sine waves.
+Also in order to be able to generate a square wave with smaller rise and fall time tl071 op-amp (\href{https://www.st.com/resource/en/datasheet/tl071.pdf}{datasheet} ) which has a big slew rate is used. Additionally for the same reason BS-170 (\href{https://www.onsemi.com/pdf/datasheet/mmbf170-d.pdf}{datasheet} )N channel enhancement mode MOSFETs are used as an inverter.  
 
 Frequency of the generated signal is calculated as follows when the necessary analysis is made:
 \begin{center}
@@ -73,7 +73,7 @@ where R is equivalent resistance between output and non-inverting terminals of t
 
 
 \subsection{Summing Amplifier}
-After generating two square waves with necassary sines, there need to be a summing amplifier to obtain one single waveform. This is made by setting a summing op-amp circuit given in Figure 3 which gives an output equals to \(- \frac{10k\Omega }{2.2k\Omega }(V_1 + V_2)\) where \(V_1\) and \(V_2\) are the outputs of the signals with  1\(kHz\) and 2\(kHz\) frequencies respectively.
+After generating two square waves with the necessary sines, there needs to be a summing amplifier to obtain one single waveform. This is made by setting a summing op-amp circuit given in Figure 3 which gives an output equals to \(- \frac{10k\Omega }{2.2k\Omega }(V_1 + V_2)\) where \(V_1\) and \(V_2\) are the outputs of the signals with  1\(kHz\) and 2\(kHz\) frequencies respectively.
 
 
 \begin{figure}[H]
@@ -135,8 +135,7 @@ For the speaker unit, a simple approach is followed. Since the transmitter has d
 As a result, all needed signals are quite audible with (almost) sine tonality. 
 
 \section{Conclusion}
- To conclude, EE214 Term Project is presented in this document by explaining generating, collecting and filtering process of sinusoidal signals with 12 different frequencies. In order to obtain well results more appropriate components are preferred and additive circuit designs (such as mosfet inverter) are used in order to obtain nice signals. Afterwards, a filter circuit with dual-opamp topology is set. Lastly, a speaker unit is set using amplifier circuit since there need a matching between impedances of speaker input and the rest of the circuit.    
-
+To conclude, EE214 Term Project is presented in this document by explaining generating, collecting, and filtering process of sinusoidal signals with 12 different frequencies. In order to obtain well results more appropriate components are preferred and additive circuit designs (such as MOSFET inverter) are used in order to obtain nice signals. Afterward, a filter circuit with dual-opamp topology is set. Lastly, a speaker unit is set using an amplifier circuit since there needs a matching between impedances of speaker input and the rest of the circuit.    
 
 \end{document}
 
