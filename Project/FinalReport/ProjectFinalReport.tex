@@ -90,7 +90,7 @@ The reason why the dual-opamp bandpass filter is used is there are only two resi
     $ \frac{H \omega_0^2 }{s^2 + \alpha \omega_0 s + \omega_0 ^2} $
     
 \end{center}
-The general schematic of the topology is given in Figure X .
+The general schematic of the topology is given in Figure 4 .
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{dualopamp.png}
@@ -102,21 +102,21 @@ To be able to adapt the circuit efficiently to our purpose following goals are s
     \item The values of the passive components should be easy to supply.
     \item The R3 should be fixed so that the highest Q is obtained for 14-15 kHz frequencies since the harmonics of the transmitter signal are quite small compared to the 1 and 2 kHz.
 \end{itemize}
-So the values of R4 and R5 are fixed to 1k, and R1 is fixed to 100K. The capacitors are fixed to 10nF. Then series of simulations are made to find a suitable value for R3, which is fixed to 1K for better amplification of 14-15 kHz signals. Lastly, the values of the R2 are fine-tuned for every frequency. This is also important to determine which range of potentiometers to be used. The circuit schematic of the receiver is given in Figure X.
+So the values of R4 and R5 are fixed to 1k, and R1 is fixed to 180K. The capacitors are fixed to 10nF. Then series of simulations are made to find a suitable value for R3, which is fixed to 1K for better amplification of 14-15 kHz signals. Lastly, the values of the R2 are fine-tuned for every frequency. This is also important to determine which range of potentiometers to be used. The circuit schematic of the receiver is given in Figure 5.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{receiver_schematic.png}
     \caption{Receiver circuit schematic.}
 \end{figure}
 
-The frequency response for the receiver circuit obtained in LTSpice is given in Figure X.
+The frequency response for the receiver circuit obtained in LTSpice is given in Figure 6.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{response.png}
     \caption{Receiver circuit frequency response.}
 \end{figure}
 \section{Physical Prototype and Results}
-To be able to construct the designed circuit LM358 (\href{https://pdf.direnc.net/upload/lm358-datasheet.pdf}{datasheet}two opamp packaged in an ic ) are used. To ensure an average of two opamp ic is sufficient to accomplish the needed filtering, double opamp ic's with the same pinout TL072 and TL082 are tested and obtained the same result. The physically prototyped version of the circuit is given in Figure X.
+To be able to construct the designed circuit LM358 (\href{https://pdf.direnc.net/upload/lm358-datasheet.pdf}{datasheet}, two opamp packaged in an ic ) are used. To ensure an average of two opamp ic is sufficient to accomplish the needed filtering, double opamp ic's with the same pinout TL072 and TL082 are tested and obtained the same result. The physically prototyped version of the circuit is given in Figure 7.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{receiver_bread.jpg}
@@ -125,7 +125,7 @@ To be able to construct the designed circuit LM358 (\href{https://pdf.direnc.net
 Four potentiometers with 1K, 10K, 50K, and 250K are used in series for R2 to fine-tune the middle frequencies. So the one potentiometer bonus is achieved.
 As a result, an analog bandpass filter with adjustable middle frequency is obtained successfully. The filter is able to filter all needed signals accurately with approximately 30-40 dB difference. The output amplitude of the filter ranges from 6 Vpp to 2Vpp. 
 \section{Speaker Unit}
-For the speaker unit, a simple approach is followed. Since the transmitter has decreasing harmonics amplitude and the receiver has increasing gain for increasing frequencies, the speaker amplification need not be higher than 2X. Also, a headphone speaker with 32R impedance is used, which has not needed for high current flow. As a result, an inverting opamp amplifier is used. The schematic is given in Figure X.
+For the speaker unit, a simple approach is followed. Since the transmitter has decreasing harmonics amplitude and the receiver has increasing gain for increasing frequencies, the speaker amplification need not be higher than 2X. Also, a headphone speaker with 32R impedance is used, which has not needed for high current flow. As a result, an inverting opamp amplifier is used. The schematic is given in Figure 8.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{speaker_schematic.jpg}
@@ -133,7 +133,26 @@ For the speaker unit, a simple approach is followed. Since the transmitter has d
 \end{figure}
 
 As a result, all needed signals are quite audible with (almost) sine tonality. 
-
+\section{Costs}
+The components supplied for the project is tabulated and given with the total cost in Table 1.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{||l|l|l||}
+    Component                            & Amount      & Cost             \\
+    Texas Instruments LM358 Double Opamp & 1           & 1.25 TL          \\
+    STMicroelectronics TL071 Opamp       & 4           & 41 TL            \\
+    Various Capacitors                   & 4           & 1 TL             \\
+    Various Resistors                    & Uncountable & 10 TL            \\
+    Potentiometers                       & 4           & 5 TL             \\
+    Breadboards                          & 3           & 0 TL (Sponsored) \\
+    32R Speaker                          & 1           & 0 TL (Sponsored) \\
+    Various Cables                       & 1 Set       & 30 TL            \\
+    Total                                &             & 89.25 TL        
+    \end{tabular}
+    \caption{Cost Table}
+    \label{tab:my-table}
+    \end{table}
+    
 \section{Conclusion}
 To conclude, EE214 Term Project is presented in this document by explaining generating, collecting, and filtering process of sinusoidal signals with 12 different frequencies. In order to obtain well results more appropriate components are preferred and additive circuit designs (such as MOSFET inverter) are used in order to obtain nice signals. Afterward, a filter circuit with dual-opamp topology is set. Lastly, a speaker unit is set using an amplifier circuit since there needs a matching between impedances of speaker input and the rest of the circuit.    
 
