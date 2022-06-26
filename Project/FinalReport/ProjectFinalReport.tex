@@ -102,7 +102,7 @@ To be able to adapt the circuit efficiently to our purpose following goals are s
     \item The values of the passive components should be easy to supply.
     \item The R3 should be fixed so that the highest Q is obtained for 14-15 kHz frequencies since the harmonics of the transmitter signal are quite small compared to the 1 and 2 kHz.
 \end{itemize}
-So the values of R4 and R5 are fixed to 1k, and R1 is fixed to 100K. The capacitors are fixed to 10nF. Then series of simulations are made to find a suitable value for R3, which is fixed to 1K for better amplification of 14-15 kHz signals. Lastly, the values of the R2 are fine-tuned for every frequency. This is also important to determine which range of potentiometers to be used. The circuit schematic of the receiver is given in Figure 5.
+So the values of R4 and R5 are fixed to 1k, and R1 is fixed to 180K. The capacitors are fixed to 10nF. Then series of simulations are made to find a suitable value for R3, which is fixed to 1K for better amplification of 14-15 kHz signals. Lastly, the values of the R2 are fine-tuned for every frequency. This is also important to determine which range of potentiometers to be used. The circuit schematic of the receiver is given in Figure 5.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{receiver_schematic.png}
@@ -116,7 +116,7 @@ The frequency response for the receiver circuit obtained in LTSpice is given in 
     \caption{Receiver circuit frequency response.}
 \end{figure}
 \section{Physical Prototype and Results}
-To be able to construct the designed circuit LM358 (\href{https://pdf.direnc.net/upload/lm358-datasheet.pdf}{datasheet}two opamp packaged in an ic ) are used. To ensure an average of two opamp ic is sufficient to accomplish the needed filtering, double opamp ic's with the same pinout TL072 and TL082 are tested and obtained the same result. The physically prototyped version of the circuit is given in Figure 7.
+To be able to construct the designed circuit LM358 (\href{https://pdf.direnc.net/upload/lm358-datasheet.pdf}{datasheet}, two opamp packaged in an ic ) are used. To ensure an average of two opamp ic is sufficient to accomplish the needed filtering, double opamp ic's with the same pinout TL072 and TL082 are tested and obtained the same result. The physically prototyped version of the circuit is given in Figure 7.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.75\textwidth]{receiver_bread.jpg}
