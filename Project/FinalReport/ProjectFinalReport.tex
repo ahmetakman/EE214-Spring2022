@@ -35,7 +35,7 @@
 \author{ Ahmet Akman 2442366 \protect\\ Yusuf Toprak Yıldıran 2444149 }
 \date{}
 \maketitle
-%\tableofcontents
+\tableofcontents
 %\begin{abstract}
 %abstract
 %\end{abstract}
@@ -115,7 +115,7 @@ The frequency response for the receiver circuit obtained in LTSpice is given in 
     \includegraphics[width = 0.75\textwidth]{response.png}
     \caption{Receiver circuit frequency response.}
 \end{figure}
-\section{Physical Prototype and Results}
+\subsection{Physical Prototype and Results}
 To be able to construct the designed circuit LM358 (\href{https://pdf.direnc.net/upload/lm358-datasheet.pdf}{datasheet}, two opamp packaged in an ic ) are used. To ensure an average of two opamp ic is sufficient to accomplish the needed filtering, double opamp ic's with the same pinout TL072 and TL082 are tested and obtained the same result. The physically prototyped version of the circuit is given in Figure 7.
 \begin{figure}[H]
     \centering
@@ -151,8 +151,8 @@ The components supplied for the project is tabulated and given with the total co
     \end{tabular}
     \caption{Cost Table}
     \label{tab:my-table}
-    \end{table}
-    
+\end{table}
+No individual power consumption analysis has been done for the circuits ,but overall ,in practice, 6 Watts of power consumed instantaneously. 
 \section{Conclusion}
 To conclude, EE214 Term Project is presented in this document by explaining generating, collecting, and filtering process of sinusoidal signals with 12 different frequencies. In order to obtain well results more appropriate components are preferred and additive circuit designs (such as MOSFET inverter) are used in order to obtain nice signals. Afterward, a filter circuit with dual-opamp topology is set. Lastly, a speaker unit is set using an amplifier circuit since there needs a matching between impedances of speaker input and the rest of the circuit.    
 
